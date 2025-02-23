@@ -1,4 +1,4 @@
-package LearnToCode;
+package LeetCode150Questions;
 
 import java.util.*;
 

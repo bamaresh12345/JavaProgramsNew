@@ -1,4 +1,4 @@
-package TwoPointers;
+package LearnToCode;
 
 import java.util.HashSet;
 
@@ -23,6 +23,9 @@ public class LogestSubStringWithOutRepeatingCharactersLeetCode3 {
         int a_pointer = 0;
         int b_pointer = 0;
 
+        int len=0;
+        String longStr="";
+
         HashSet<Character> set = new HashSet<>();
 
         while (b_pointer < s.length()) {
@@ -31,6 +34,11 @@ public class LogestSubStringWithOutRepeatingCharactersLeetCode3 {
                 System.out.println("add from b pointer " + set);
                 b_pointer++;
                 max = Math.max(set.size(), max);
+                if(max > len)
+                {
+                    len=max;
+                    longStr = set.toString();
+                }
 
             } else {
                 set.remove(s.charAt(a_pointer));
@@ -41,11 +49,14 @@ public class LogestSubStringWithOutRepeatingCharactersLeetCode3 {
 
 
         System.out.println(set);
+        System.out.println("longStr--> " + String.valueOf(longStr));
+        System.out.println("len--> " + len);
         return max;
     }
 
     public static void main(String[] args) {
-        String s = "abcabcbb";
+       // String s = "abcabcbb";
+        String s = "javaconceptoftheday";
         //String s = "pwwkew";
 
         System.out.println(LongestSubString(s));

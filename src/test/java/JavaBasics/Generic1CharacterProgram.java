@@ -47,64 +47,113 @@ public class Generic1CharacterProgram {
         Character.isWhitespace(c);
         Character.toLowerCase(c);
         Character.toUpperCase(c);
+        Character.isAlphabetic(c);
+        Character.isWhitespace(c);
         String s1 = Character.toString(c);
         System.out.println(s1);
 
         Character.isLetterOrDigit(c);
 
-        //==========================================================================
+        String str = "Te1s@t!3 is     is$t   Man?ual";
+        int count=0,alphanum=0,upperCase=0,lowerCase=0,whiteSpace=0,uppercaseletter=0 , lowercaseletter=0,specialchars=0;
+        char[] chars = str.toCharArray();
 
-        String s = "test";
+        String s = "" + chars;
+        System.out.println(String.valueOf(chars)); // String.ValueOf(chars)  --> to convert chars to String
 
-        s.toLowerCase();
-        s.toUpperCase();
-        s.toCharArray();
+        for(int i =0; i < chars.length; i++)
+        {
+            char c1= chars[i];
+            if(Character.isDigit(chars[i])) //  OR if(Character.isDigit(c))
+            {
+                count++;
+                System.out.println(c1);
+            }
 
-        s.toString();
+            if(Character.isAlphabetic(c1))
+            {	System.out.println("AlphaNum : " + c1);
+                alphanum++;
+            }
 
-        s.length();
+            if(Character.isUpperCase(c1))
+            {
+                System.out.println("UpperCase?  : " + c1);
+                upperCase++;
+            }
 
-        s.contains("te"); // *** IMP
+            if(Character.isLowerCase(c1))
+            {
+                System.out.println("isLowerCase?  : " + c1);
+                lowerCase++;
+            }
 
-        s.charAt(1);         // *** IMP
+            if(Character.isDigit(c1) || Character.isAlphabetic(c1) )
+            {
+                System.out.println("Alphanumeric?  : " + c1);
+                alphanum++;
+            }
 
-        s.equals("test");              // *** IMP
-        s.equalsIgnoreCase("testt");  // *** IMP
 
-        s.concat("tt");                       // *** IMP
-        s.replace('t', 'T');
-        s.replace("e", "E");
-        s.replaceAll("[AEIOUaeiou]", "");   // *** IMP
-        s.replaceAll("[^0-9A-Za-z]", "");
+            if(Character.isWhitespace(c1))
+            {
 
-        String s2 = s.replace('t', 'T');
-        System.out.println(s2);
+                System.out.println("Whilte space : " + c1);
+                whiteSpace++;
 
-        String s3 = s.replaceAll("[AEIOUaeiou]", "");
+            }
+
+            //System.out.println("converted to  UPPER CASE : " + Character.toUpperCase(c));
+            //  System.out.println("converted to  lowercase : " + Character.toLowerCase(c));
+
+            if(c1 >='A' && c1 <='Z')
+            {
+                uppercaseletter++;
+            }
+
+            if(c1 >='a' && c1 <='z')
+            {
+                lowercaseletter++;
+            }
+
+            //Character.toLowerCase(c)
+
+            if(!(Character.isAlphabetic(c1)) && !(Character.isDigit(c1)) && !(Character.isWhitespace(c1)))  // IMP
+            {
+                System.out.println("specialchars : " +specialchars);
+                System.out.println("special char is  : " + c1);
+                specialchars++;
+            }
+
+        }
+        System.out.println("Total Whilte space : " + whiteSpace);
+
+        System.out.println(" Total  UPPER CASE letters : " + uppercaseletter);
+        System.out.println(" Total  LOWER CASE letters : " + lowercaseletter);
+        System.out.println(" Total  SPECAIL  letters : " + specialchars);
+
+
+
+
+        String str1="Pr!ogr#am%m*in&g Lan?#guag(e";
+        //str1 = str1.toLowerCase();
+
+        String str2 = str1.replaceAll("[^a-zA-Z0-9 ]", "");
+
+        System.out.println(str2);
+
+        String s3 = "";
+
+        char[] chars1 = str.toCharArray();
+
+        for(int i=0; i<chars.length-1; i++)
+        {
+            if(Character.isAlphabetic(chars1[i]) || Character.isSpace(chars1[i]))
+            {
+                s3 = s3 + chars1[i];
+            }
+        }
+
         System.out.println(s3);
-
-        s.indexOf('a');  // ('from char')
-        s.indexOf("st");    // ("from String")
-        s.indexOf("str", 5); // ("str", fromIndex)
-
-        s.substring(0, s.length() - 2);   // (begining Index Integer, end Index Integer)
-        s.substring(3);           // (begining Index Integer)
-        s.substring(0, s.length() - 'i');
-
-        s.indexOf("test"); //wok on it
-        s.indexOf("test");
-        s.indexOf("test");
-        s.lastIndexOf("test");
-        s.lastIndexOf("test");
-        s.lastIndexOf("test");
-
-        s.compareTo("test");
-
-
-        s.startsWith("AB");
-        s.endsWith("AB");
-
-        s.replaceFirst("t1", "t2");
 
 
     }
