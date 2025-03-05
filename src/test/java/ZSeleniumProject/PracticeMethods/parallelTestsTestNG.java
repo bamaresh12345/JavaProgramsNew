@@ -1,4 +1,4 @@
-package PracticeMethods;
+package ZSeleniumProject.PracticeMethods;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

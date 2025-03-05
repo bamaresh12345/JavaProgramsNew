@@ -1,16 +1,16 @@
 package ServiceCompanyInterviewQuestions;
 
-public class ReverseString2 {
+public class ReverseStringIMP {
 
     public static String reverseString(String s) {
 
 
-        if(s.length()==0 || s== null)
+        if(s == null || s.length()==0 || s.isEmpty() || s.isBlank() ) // ** IMP***
         {
             return "not valid String, Pelase enter correct String";
         }
 
-        //==============To reverse String  , even with Space itworks fine
+       //==============To reverse String , SPACE is also considered
         String rev = "";
         for (int i = 0; i < s.length(); i++) {
 
@@ -31,7 +31,8 @@ public class ReverseString2 {
     }
 
     public static void main(String[] args) {
-        String s = "This is for Testing";
+       // String s = "This is for Testing";
+        String s = null;
 
         System.out.println(reverseString(s));
     }

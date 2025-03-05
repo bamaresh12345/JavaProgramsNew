@@ -21,14 +21,14 @@ public class Generic1CharacterProgram {
 
         //import java.lang.*
         /* Character  --> is a static class , provides below list of methods
-            isDigit(int)
-            isLetter(int)
-            isLetterOrDigit(int)
-            isLowerCase(int)
-            isUpperCase(int)
-           isWhitespace(c)
-            toLowerCase(c)
-            toUpperCase(c)
+            Character.isDigit(int)
+            Character.isLetter(int)
+            Character.isLetterOrDigit(int)
+            Character.isLowerCase(int)
+            Character.isUpperCase(int)
+           Character.isWhitespace(c)
+            Character.toLowerCase(c)
+            Character.toUpperCase(c)
             Character.toString(c)
 
               c = Character.toLowerCase(c)
@@ -40,9 +40,11 @@ public class Generic1CharacterProgram {
 
 
          */
+               c='B';
+               //String s21="Amar";
+              // char[] chars1 = s21.toCharArray();
 
         Character.isLetter(c);
-
         Character.isDigit(c);
         Character.isWhitespace(c);
         Character.toLowerCase(c);

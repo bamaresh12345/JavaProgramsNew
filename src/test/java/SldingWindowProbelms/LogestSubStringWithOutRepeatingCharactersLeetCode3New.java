@@ -33,41 +33,41 @@ public class LogestSubStringWithOutRepeatingCharactersLeetCode3New {
         int n = arr.length;
         if (n < 2) return n;
 
-// define pointers //
+        // define pointers //
 
-        int L = 0, R = 0;
+                int L = 0, R = 0;
 
-// DEFINE TABLE //
+        // DEFINE TABLE //
 
-        Map<Character, Integer> hm = new HashMap<>();
+                Map<Character, Integer> hm = new HashMap<>();
 
-// define max len //
-        int maxLen = 0;
+        // define max len //
+                int maxLen = 0;
 
-// find longest substring //
-        while (R < n) {
-// add current element
-            hm.put(arr[R], hm.getOrDefault(arr[R], 0) + 1);
+        // find longest substring //
+                while (R < n) {
+        // add current element
+                    hm.put(arr[R], hm.getOrDefault(arr[R], 0) + 1);
 
-//check if we meet the condition //
-            while (hm.size() != R - L + 1) {
-                hm.put(arr[L], hm.get(arr[L]) - 1);
+        //check if we meet the condition //
+                    while (hm.size() != R - L + 1) {
+                        hm.put(arr[L], hm.get(arr[L]) - 1);
 
-                if (hm.get(arr[L]) == 0) {
-                    hm.remove(arr[L]);
+                        if (hm.get(arr[L]) == 0) {
+                            hm.remove(arr[L]);
+                        }
+                        L++;
+
+                    }
+        // update the maxlen //
+                    maxLen = Math.max(maxLen, R - L + 1);
+
+        // move the R one to the right //
+
+                    R++;
+
                 }
-                L++;
-
-            }
-// update the maxlen //
-            maxLen = Math.max(maxLen, R - L + 1);
-
-// move the R one to the right //
-
-            R++;
-
-        }
-// return maxlen //
+        // return maxlen //
 
         return maxLen;
     }

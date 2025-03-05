@@ -1,6 +1,6 @@
 package ServiceCompanyInterviewQuestions;
 
-public class printSumOfAllSubArrays {
+public class printSumOfAllSubArraysIMPgood {
 
     public static void printSumOfAllSubArrays(int[] nums, int target) {
         int left = 0;

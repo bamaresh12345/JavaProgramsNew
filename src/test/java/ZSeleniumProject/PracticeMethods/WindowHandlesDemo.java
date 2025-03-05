@@ -1,4 +1,4 @@
-package PracticeMethods;
+package ZSeleniumProject.PracticeMethods;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -35,12 +35,9 @@ public class WindowHandlesDemo {
                Thread.sleep(2000);
                driver.close();
            }
-
-
-
        }
+       driver.switchTo().window(mainWindow); // Switching to main Window
 
-       driver.switchTo().window(mainWindow);
         String s= driver.findElement(By.xpath("//button[@id='newTabBtn']")).getAttribute("class");
         Assert.assertEquals(s,"whButtons1");
         driver.quit();
@@ -69,11 +66,9 @@ public class WindowHandlesDemo {
                 myAlerts.accept();
                 driver.close();
             }
-
-
         }
+        driver.switchTo().window(mainWindow);   // Switching to main Window
 
-        driver.switchTo().window(mainWindow);
         String s= driver.findElement(By.xpath("//button[@id='newTabBtn']")).getAttribute("class");
         Assert.assertEquals(s,"whButtons1");
         driver.quit();

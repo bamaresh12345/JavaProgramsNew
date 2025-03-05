@@ -1,6 +1,6 @@
 package ServiceCompanyInterviewQuestions;
 
-public class countTheOccurenceOfGivenCharInString {
+public class countAndAddTheOccurenceOfGivenCharInString {
 
     public static int countOccurenceOfChar(String s, char c) {
         int count = 0;

@@ -1,4 +1,4 @@
-package PracticeMethods;
+package ZSeleniumProject.PracticeMethods;
 
 import BaseClass.baseClass;
 import org.apache.commons.io.FileUtils;

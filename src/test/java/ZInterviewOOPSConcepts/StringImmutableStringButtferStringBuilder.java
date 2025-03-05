@@ -20,8 +20,10 @@ public class StringImmutableStringButtferStringBuilder {
 		
 		System.out.println(a.equals(b)); //true
 		System.out.println(a==b); //true
+		System.out.println(s1==s2); //false --> reference are difference as tehy are defined with string class
 		System.out.println(a.equals(s1)); //ture --> both matching the values
 		System.out.println(a==s1); //false --> both matching the reference not values
+		System.out.println(s1==b); //false --> both matching the reference not values
 		System.out.println(s1==s2); //false --> reference are difference as tehy are defined with string class
 		
 		

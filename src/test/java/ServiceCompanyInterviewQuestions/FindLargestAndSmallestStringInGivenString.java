@@ -39,41 +39,7 @@ public class FindLargestAndSmallestStringInGivenString {
 
 
         System.out.println(largestString(s));
-        System.out.println(largestStringCollections(s));
-    }
 
-
-    public static String largestStringCollections(String s) {
-        String[] words = s.split(" ");
-        List<Integer> list = new ArrayList<>();
-
-        for (int i = 0; i < words.length; i++) {
-
-            list.add(words[i].length());
-        }
-
-        Collections.sort(list);
-        System.out.println(list);
-
-        //String smallestString = list.get(0);
-        System.out.println("Smallest String lsit : " + list.get(0));
-        System.out.println("Largest String list : " + list.get(list.size() - 1));
-
-        String smallest = "", largest = "";
-        for (int i = 0; i < words.length; i++) {
-            if (words[i].length() == list.get(0)) {
-                System.out.println("Smallest String lsit : " + words[i]);
-                smallest = words[i];
-
-            } else if (words[i].length() == list.get(list.size() - 1)) {
-
-                System.out.println("Largest String list : " + words[i]);
-                largest = words[i];
-            }
-        }
-
-
-        return "small String: " + smallest + " and large String: " + largest;
 
     }
 

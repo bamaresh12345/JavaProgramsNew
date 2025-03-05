@@ -1,9 +1,13 @@
 package ZInterviewOOPSConcepts;
 
-// Method overload : If a class has multiple methods with same name but different in parameters, it is known as Method Overloading.
-//Can achive method overloading by same nubmer of parmamters with differnt data types or by differnt nubmer of parmanteres with same 
-//datatype
-//Advantage of Method overloading is it increases the readability of the program.
+/* Method overload : If a class has multiple methods with same name but different in parameters, it is known as Method Overloading.
+Can achive method overloading by
+ same nubmer of parmamters with differnt data types or
+// by differnt nubmer of parmanteres with same datatype
+Advantage of Method overloading is it increases the readability of the program.
+/*
+ */
+
 public class MethodOverLoading {
 	
 	public int add(int a, int b)

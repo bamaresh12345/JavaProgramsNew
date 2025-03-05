@@ -26,6 +26,7 @@ Abstraction --> hidng the implemenatiaon and showing only functionlatiy is calle
 
         // get the dropdown web element
         WebElement dropdown = driver.findElement(By.xpath("//select[@id='country']"));
+       // WebElement dropdown = driver.findElement(By.xpath("//select/option[text()=\'+option+\']"));
 
         //this for inheritance callling methods from parent class to child class
         waitForElementToBeClickable(dropdown,driver);

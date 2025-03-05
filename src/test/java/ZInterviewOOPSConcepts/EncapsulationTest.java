@@ -22,12 +22,24 @@ public class EncapsulationTest {
 	private WebElement password;
 	
 	public void setUserName(String name) {
-		uname.sendKeys(name);
+		try {
+			uname.sendKeys(name);
+		}
+		catch (Exception e)
+		{
+			System.out.println("elemelnt " + uname + "not working chgeck details : " + e.getMessage());
+		}
 		
 	}
 	
 	public void setPassword(String password) {
-		uname.sendKeys(password);
+		try {
+			uname.sendKeys(password);
+		}
+		catch (Exception e)
+		{
+			System.out.println("elemlent " + uname + "not working check details " + e.getMessage());
+		}
 		
 	}
 	

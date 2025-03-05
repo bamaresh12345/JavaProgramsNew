@@ -77,13 +77,36 @@ public class DropDownSelectionMethods extends baseClass
 
 
 
+        String option="Highest to lowest";
+
+        WebElement dropdown1 =driver.findElement(By.xpath("//select/option[contains(text(), '"+option+"')]"));
+
+        dropdown.click();
+
 
 
 
 
 
     }
+    @Test
+         public void list() {
 
+        WebDriver driver = new ChromeDriver();
+
+         driver.get("https://www.bstackdemo.com/");
+
+         driver.findElement(By.xpath("//select")).click();
+
+         String option = "Highest to lowest";
+
+        WebElement dropdown = driver.findElement(By.xpath("//select/option[contains(text(), '" + option + "')]"));
+
+        dropdown.click();
+
+         System.out.println("clicked");
+
+         }
 
     }
 

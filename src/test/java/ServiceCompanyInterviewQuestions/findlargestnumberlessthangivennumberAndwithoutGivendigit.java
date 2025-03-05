@@ -2,6 +2,8 @@ package ServiceCompanyInterviewQuestions;
 
 public class findlargestnumberlessthangivennumberAndwithoutGivendigit {
 
+    //find largestnumber less than given number And without Given digit
+
     static int getLLessThanN(int number, int digit) {
         //Converting digit to String
         String c = "";            // OR --> String c = Integer.toString(num);

@@ -13,8 +13,9 @@ public class Cat  extends InheritanceAnimal{
 	String color = "black";
 	public void eating()
 	{
-		
-		
+
+
+		eat(); // this also works , will be ambugity when we have same method in class
 		super.eat();  // calling parent method in child class
 		System.out.println("default anumal color: " + super.color);  // calling parent variable in child class
 		System.out.println("cat color : " + color);   //// calling instant variable in child class

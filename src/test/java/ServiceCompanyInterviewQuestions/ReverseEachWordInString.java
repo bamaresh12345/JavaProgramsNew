@@ -18,6 +18,7 @@ public class ReverseEachWordInString {
                 revWord = words[i].charAt(j) + revWord;    // Very IMP***
 
             }
+
             revString1 = revString1 + " " + revWord;  // Very IMP***
             //  revString2 = revWord + " " + revString2;  // Very IMP***
 
@@ -31,7 +32,7 @@ public class ReverseEachWordInString {
     }
 
     public static void main(String[] args) {
-        String s = "Java is good prgrgramming langugage";
+        String s = "Java is good prgrgramming langugage";  //avaJ si doog gnimmargrgrp egagugnal
 
         System.out.println(reverseEachWordInString(s));
     }

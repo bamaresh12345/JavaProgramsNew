@@ -8,7 +8,9 @@ public class CountOccurenceofEachCharacterInString {
     public static void countOccurenceofEachCharacterInString(String s) {
 
         Map<Character, Integer> map = new HashMap<>();
-        s = s.replace(" ", "");
+
+        s = s.replace(" ", "");  // ** IMP
+        System.out.println("without space--> " + s);
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             map.put(c, map.getOrDefault(c, 0) + 1);

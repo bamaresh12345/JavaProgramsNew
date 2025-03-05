@@ -38,7 +38,7 @@ public class removeDuplicatesMaintainSameOrder {
         System.out.println(tset);   //[2, 3, 6, 8, 12, 14, 17, 22]
 
 
-        //Set<Integer> tset = new reeSet<>() --> ** IMP does not maintain any insertion oder. but will be sorted in Asending order
+        //Set<Integer> tset = new TreeSet<>() --> ** IMP maintains insertion oder. but will be sorted in Asending order
         Set<Integer> lset = new LinkedHashSet<>();
 
         for (int i = 0; i < arr.length; i++) {

@@ -8,9 +8,9 @@ public class ReverseeachwordInStringUsingStringBuilder {
 
         for (String w : words) {
             StringBuilder revWord = new StringBuilder(w);
-            result.append(revWord.reverse()).append(" ");
+            result.append(revWord.reverse()).append(" "); // SAME  // *** IMP frist append and reverse .append
         }
-        return result;
+        return result;  //** IMP
     }
 
 
@@ -20,9 +20,9 @@ public class ReverseeachwordInStringUsingStringBuilder {
 
         for (String w : words) {
             StringBuilder revWord = new StringBuilder(w);
-            result.append(revWord.reverse()).append(" ");
+            result.append(revWord.reverse()).append(" ");  // *** IMP frist append and reverse .append
         }
-        return result.toString();
+        return result.toString(); //** IMP
     }
 
 

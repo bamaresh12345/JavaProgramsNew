@@ -14,6 +14,7 @@ public class Generic5SetProgram {
         set1.remove("Bhem");
         //set1.clear();
         set1.size();
+        set1.contains("test");
 
 
         //Converting list to Array
@@ -63,7 +64,7 @@ public class Generic5SetProgram {
         Collections.min(set23);
         // intersectionSet.retainAll(set); --> Check
 
-        Set<String> set11 = new TreeSet<>();  //--> retains the insertion order, helps to remove dupplicats from String
+        Set<String> set11 = new TreeSet<>();  //--> sorts the insertion order, helps to remove dupplicats from String
         String s = "I am am amar amar";  // Set<String> set = new TreeSet<>()  retains order
         Set<String> set12 = new LinkedHashSet<>(); //--> retains the insertion order, helps to remove dupplicats from String
 
