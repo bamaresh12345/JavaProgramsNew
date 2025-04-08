@@ -1,6 +1,7 @@
 package ZSeleniumProject.PracticeMethods;
 
-import BaseClass.baseClass;
+
+import ZSeleniumProject.BaseClass.baseClass;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;

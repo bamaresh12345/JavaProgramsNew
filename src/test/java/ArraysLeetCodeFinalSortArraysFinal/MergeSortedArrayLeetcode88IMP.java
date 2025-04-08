@@ -22,32 +22,39 @@ The result of the merge is [1].
 
 public class MergeSortedArrayLeetcode88IMP {
 
-    public static void mergeSortedArray(int[] nums1, int[] nums2, int m, int n) {
+    public static int[] mergeSortedArray(int[] nums1, int[] nums2, int m, int n) {
         int p1 = m - 1;
         int p2 = n - 1;
-        int p3 = m + n - 1;
+        int p = m + n - 1;
 
-        while (p3 >= 0)  //j>= is imp
+        while(p1 >=0 && p2>=0)
         {
-            int element1 = 0, element2 = 0;
-
-            element1 = (p1 >= 0) ? nums1[p1] : Integer.MIN_VALUE;
-            element2 = (p2 >= 0) ? nums2[p2] : Integer.MIN_VALUE;
-
-            if (element1 > element2) {
-                nums1[p3] = element1;
-                p3--;
+            if(nums1[p1] > nums2[p2])
+            {
+                nums1[p] = nums1[p1];
+                p--;
                 p1--;
-            } else {
-                nums1[p3] = element2;
-                p3--;
+            }
+            else
+            {
+                nums1[p] = nums2[p2];
+                p--;
                 p2--;
             }
 
-
         }
 
-        System.out.println(Arrays.toString(nums1));
+        //if ther are remaning elelments in nums2 , copy them
+        while(p2 >=0)
+        {
+            nums1[p] = nums2[p2];
+            p--;
+            p2--;
+        }
+
+        return nums1;
+
+
 
     }
 
@@ -61,9 +68,13 @@ public class MergeSortedArrayLeetcode88IMP {
         int n = 3;
 
         mergeSortedArray(nums1, nums2, m, n);
+       // mergeSortedArray1(nums1, nums2, m, n);
+
 
         System.out.println("Integer.MIN_VALUE= " + Integer.MIN_VALUE);
 
 
     }
+
+
 }

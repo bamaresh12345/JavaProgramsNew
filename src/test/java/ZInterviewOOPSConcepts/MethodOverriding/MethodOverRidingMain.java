@@ -15,9 +15,9 @@ public class MethodOverRidingMain {
 	//The method must have the same parameter as in the parent class.
 	//There must be an IS-A relationship (inheritance).
 	
-	public void Method1Override(int a, int b)
+	public void Method1OverrideSalary(int hours, int rate)
 	{
-		int c = a+b;
+		int c = hours+rate;
 	  System.out.println("am in parent Method1Override " + c );	
 	}
 

@@ -18,8 +18,9 @@ public class ReverseString2 {
         }
 
         //==============To reverse String===== entire string
-
-        String[] words = rev.split(" +");
+//f you want to remove extra spaces and print a cleaned-up version, you should use:
+        //" +" is a regular expression that matches one or more spaces.
+        String[] words = rev.split(" +");  // rev.split(" *") // it splits all chars indudually eg: t h e
         String rev2 = "";
         for (int i = 0; i < words.length; i++) {
 

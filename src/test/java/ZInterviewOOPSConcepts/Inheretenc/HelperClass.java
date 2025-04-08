@@ -5,8 +5,11 @@ import org.openqa.selenium.WebElement;
 
 public class HelperClass extends  baseClass{
 
+
+    //int helperValue=0;
+    //String helperString="tesitng";
     @Override
-    public void SelectValue_Non_StaticMethod(WebElement ele, String value) {
+    public void SelectDropdownValue(WebElement ele, String value) {
        // super.SelectValue_Non_StaticMethod(ele, value); Yes or no our wish
         System.out.println("Adding enter KeyWord");
         System.out.println("KeyWord Down");

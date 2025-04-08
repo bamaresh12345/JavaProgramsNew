@@ -1,8 +1,6 @@
 package ZInterviewOOPSConcepts.MethodOverriding;
 
 
-import ZInterviewOOPSConcepts.MethodOverRidingMain;
-
 public class MethodOverRidingChild extends MethodOverRidingMain {
 
 	
@@ -18,9 +16,9 @@ public class MethodOverRidingChild extends MethodOverRidingMain {
 		//The method must have the same name as in the parent class
 		//The method must have the same parameter as in the parent class.
 		//There must be an IS-A relationship (inheritance).
-	
-	public void Method1Override(int a, int b) {
-		int c = a+b + 10; // 12 as bonus
+
+	public void Method1OverrideSalary(int hours, int rate) {
+		int c = hours+rate + 10; // 10% as bonus
 		
 		System.out.println(" am in child calss with specific implementation :  " + c);
 		
@@ -32,11 +30,11 @@ public class MethodOverRidingChild extends MethodOverRidingMain {
 		// TODO Auto-generated method stub
 		
 		MethodOverRidingChild obj = new MethodOverRidingChild();
-		obj.Method1Override(2, 2);
+		//obj.Method1Override(2, 2);
 		
 		System.out.println("*********************");
 		MethodOverRidingMain obj2 = new MethodOverRidingMain();
-		obj2.Method1Override(2, 2);
+		///obj2.Method1Override(2, 2);
 
 	}
 

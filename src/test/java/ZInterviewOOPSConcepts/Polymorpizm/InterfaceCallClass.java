@@ -5,7 +5,7 @@ public class InterfaceCallClass {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		BankOfAmericaClass b = new BankOfAmericaClass();
+		InterviewOOPSConcepts.Polymorpizm.BankOfAmericaClass b = new InterviewOOPSConcepts.Polymorpizm.BankOfAmericaClass();
 		System.out.println("SBI Rate of Interest: "+b.getIntrestRate());  
 		
 		

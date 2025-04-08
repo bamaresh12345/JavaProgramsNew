@@ -1,4 +1,4 @@
-package TwoPointer;
+package TwoPointers;
 
 /*
 560. Subarray Sum Equals K
@@ -27,6 +27,7 @@ public class LongestSubarraySumEqualsK {
         int maxLen = 0;
         while (right < n) {
 
+
             sum = sum + nums[right];
 
             while (sum > k) {
@@ -41,7 +42,7 @@ public class LongestSubarraySumEqualsK {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, -1, 5, -2, 3};
+        int[] nums = {1,2,3};
         int k = 3;
         System.out.println(longestSubarraySumEqualsK(nums, k));
     }

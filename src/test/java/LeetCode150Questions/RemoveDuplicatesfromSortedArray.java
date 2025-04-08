@@ -33,7 +33,7 @@ public class RemoveDuplicatesfromSortedArray {
         int counter = 0;
         for (int i = 0; i < nums.length; i++) {
 
-            if (i < nums.length - 1 && nums[i] == nums[i + 1]) {
+            if (i < nums.length - 1 && nums[i] == nums[i + 1]) {  //*** IMP this hosuld be at top else it will give wrong result
 
                 continue;
             } else {

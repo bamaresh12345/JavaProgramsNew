@@ -1,5 +1,7 @@
 package LeetCode150Questions;
 
+import java.util.HashMap;
+
 /*
 383. Ransom Note Easy
 Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the
@@ -28,30 +30,38 @@ public class RasomNoteLeetCode383Easy {
 
 
      */
-    public static boolean rasomNote(String ransomNote, String magazine) {
-        int[] freq = new int[26];
 
-        for (int i = 0; i < magazine.length(); i++) {
-            freq[magazine.charAt(i) - 'a']++;  //** magazine.charAt(i)  freq[magazine.charAt(i) - 'a']
 
-        }
+        public static boolean rasomNote(String ransomNote, String magazine) {
+            // Create a HashMap to store the frequency of characters in the magazine
+            HashMap<Character, Integer> map = new HashMap<>();
 
-        for (int i = 0; i < ransomNote.length(); i++) {
-            if (freq[ransomNote.charAt(i) - 'a'] == 0)  // freq[ransomNote.charAt(i) - 'a']
-            {
-                return false;
+            // Count frequencies of characters in the magazine
+            for (char ch : magazine.toCharArray()) {
+                map.put(ch, map.getOrDefault(ch, 0) + 1);
             }
-            freq[ransomNote.charAt(i) - 'a']--;   // VERY IMP****
+
+            // Check if we can form the ransomNote
+            for (char ch : ransomNote.toCharArray()) {
+                if (!map.containsKey(ch) || map.get(ch) == 0) {  //First, check if the character exists in the magazine using containsKey().hen ensure there are enough instances by checking if the frequency is greater than zero.
+                    return false; // Not enough characters to form ransomNote
+                }
+                map.put(ch, map.get(ch) - 1); // Use one character and Decrease the count by 1 to mark that letter as used.
+            }
+
+            return true; // ransomNote can be constructed
         }
 
-        return true;
 
-    }
+
 
     public static void main(String[] args) {
         String ransomNote = "aa";
         String magazine = "ba";
 
-        System.out.println(rasomNote(ransomNote, magazine));
+        System.out.println(rasomNote(ransomNote, magazine)); //false
+        System.out.println(rasomNote("a", "b")); // Output: false
+        System.out.println(rasomNote("aa", "ab")); // Output: false
+        System.out.println(rasomNote("aa", "aab")); // Output: true
     }
 }

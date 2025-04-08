@@ -57,11 +57,38 @@ public class TwoSumIIarray {
 
         //int[] nums = {2,7,11,15};
         //int target = 9;
-        int[] nums = {3, 2, 4};
+        int[] nums = {2,3, 4};
         int target = 6;
 
         System.out.println(Arrays.toString(twoSum1(nums, target)));
         System.out.println(Arrays.toString(twoSum2(nums, target)));
+        System.out.println(Arrays.toString(twoSum3(nums, target))); //might get wrong answer due to calling 3 times ignore it
 
+    }
+
+    private static int[] twoSum3(int[] arr, int target) {
+
+        int start=0;
+        int end = arr.length-1;
+
+        while(start < end)
+        {
+            int sum = arr[start] + arr[end];
+            if(sum==target)
+            {
+                return new int[] {start,end};
+            }
+            else if( sum < target)
+            {
+                start++;
+
+            }
+            else
+            {
+                end--;
+            }
+        }
+
+        return new int[] {-1,-1};
     }
 }

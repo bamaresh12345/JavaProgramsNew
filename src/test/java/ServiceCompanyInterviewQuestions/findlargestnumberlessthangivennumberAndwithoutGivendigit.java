@@ -7,12 +7,12 @@ public class findlargestnumberlessthangivennumberAndwithoutGivendigit {
     static int getLLessThanN(int number, int digit) {
         //Converting digit to String
         String c = "";            // OR --> String c = Integer.toString(num);
-        c = c + digit;
+        c = c + digit;   // String c = Digit + string c; , forms String 888 IMP****
 
         //Decrementing number & checking whether it contains digit
         for (int i = number; i > 0; i--) {
             String d = "";      // OR --> String d = Integer.toString(i);
-            d = d + i;
+            d = d + i;         // String d = digit + string d; , forms String 888 IMP****
 
             if (d.contains(c)) {
                 continue;

@@ -31,8 +31,8 @@ public class ReverseStringIMP {
     }
 
     public static void main(String[] args) {
-       // String s = "This is for Testing";
-        String s = null;
+        String s = "This is for Testing";
+       // String s = null;
 
         System.out.println(reverseString(s));
     }

@@ -1,37 +1,32 @@
-package TwoPointer;
+package TwoPointers;
 
 public class MinimumSizeSubarraySumLeetCode209MediumWithPrint {
 
     public static int MinimumSizeSubarraySum(int[] nums, int target) {
         int left = 0;
-        int right = 0;
-        int n = nums.length;
-        int sum = 0;
-        int maxLen = Integer.MAX_VALUE;
 
-        while (right < n) {
+
+        int sum = 0;
+        int minLen = Integer.MAX_VALUE;
+
+        for (int right = 0; right < nums.length; right++) {
+
             sum = sum + nums[right];
 
             while (sum >= target) {
-                maxLen = Math.min(maxLen, right - left + 1);
+                minLen = Math.min(minLen, right - left + 1);
                 sum = sum - nums[left];
                 left++;
-
-                if (sum == target) {
-                    for (int i = left; i <= right; i++) {
-                        System.out.print(nums[i] + " ");
-                    }
-                    System.out.println();
-                }
-
-
             }
-
-
-            right++;
+            if (sum == target) {
+                for (int i = left; i <= right; i++) {
+                    System.out.print(nums[i] + " ");
+                }
+                System.out.println();
+            }
         }
 
-        return maxLen == Integer.MAX_VALUE ? 0 : maxLen;
+        return minLen == Integer.MAX_VALUE ? 0 : minLen;
 
 
     }

@@ -38,7 +38,10 @@ public class ValidAnagramIMPORTANT {
         Arrays.sort(chars);
         Arrays.sort(chart);
 
-        return Arrays.equals(chars, chart);
+        if(Arrays.equals(chars, chart))
+            return true;
+        else
+            return false;
 
 
     }

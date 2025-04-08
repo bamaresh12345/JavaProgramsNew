@@ -4,6 +4,28 @@ import java.util.*;
 
 public class Generic5SetProgram {
 
+
+    /*  IMP Set methods
+      set1.add("Ram");     set.add(i)
+      set.remove("Sam")
+      set.contains("sdf")  --. ** IMP
+      set.size()
+      set.clear()
+
+      // converting set to array
+      String[] arr = new String[set1.size()];     or
+      for(String s :set1)
+      {   arr1[i] = s;
+      }
+
+      // converting array to set
+      int[] arr2 = {3, 8, 2, 5, 6};
+        Set<Integer> set3 = new HashSet<>();
+        //Converting Array ot list
+        for (int k : arr2) {
+            set3.add(k);
+        }
+     */
     public static void main(String[] args) {
         Set<String> set1 = new HashSet<>();
         set1.add("Ram");
@@ -20,8 +42,8 @@ public class Generic5SetProgram {
         String[] arr = new String[set1.size()];
 
         int i = 0;
-        for (String s : set1) {
-            arr[i] = s;
+        for (String s : set1) { // **** IMP Memerizie  same with int  for (int s : set1)
+            arr[i] = s;     // **** IMP Memerizie  assigning value is s or i *** not set.get(i)  etc..
             i++;
         }
         System.out.println(Arrays.toString(arr));

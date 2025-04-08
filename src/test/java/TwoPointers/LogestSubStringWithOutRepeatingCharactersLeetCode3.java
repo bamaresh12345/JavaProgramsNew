@@ -20,22 +20,20 @@ public class LogestSubStringWithOutRepeatingCharactersLeetCode3 {
 
     public static int LongestSubString(String s) {
         int max = 0;
-        int a_pointer = 0;
-        int b_pointer = 0;
+        int left = 0;
+        int right = 0;
 
         HashSet<Character> set = new HashSet<>();
 
-        while (b_pointer < s.length()) {
-            if (!set.contains(s.charAt(b_pointer))) {
-                set.add(s.charAt(b_pointer));
-                System.out.println("add from b pointer " + set);
-                b_pointer++;
+        while (right < s.length()) {
+            if (!set.contains(s.charAt(right))) {
+                set.add(s.charAt(right));
+                right++;
                 max = Math.max(set.size(), max);
 
             } else {
-                set.remove(s.charAt(a_pointer));
-                System.out.println("remove from a pointer " + set);
-                a_pointer++;
+                set.remove(s.charAt(left));
+                left++;
             }
         }
 

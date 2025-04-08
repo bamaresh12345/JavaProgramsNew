@@ -4,10 +4,11 @@ public class ReverseStringWithPresevingSpaces {
 
     public static String ReverseStringPreserveSpaces(String s) {
 
-        int start = 0;
+        int start = 0;  // ** IMP
 
         char[] chars = s.toCharArray();
-        int end = chars.length - 1;
+
+        int end = chars.length - 1;  // ** IMP
 
         while (start < end) {
             if (!Character.isLetter(chars[start])) {
@@ -23,12 +24,13 @@ public class ReverseStringWithPresevingSpaces {
             }
         }
 
-        return String.valueOf(chars);
+        String newStr = String.valueOf(chars);   // **8 IMP
+        return newStr;
 
     }
 
     public static void main(String[] args) {
-        String s = "I Am Not String";
+        String s = "I Am Not String";  //g ni rtS toNmAI
 
         System.out.println(ReverseStringPreserveSpaces(s));
     }

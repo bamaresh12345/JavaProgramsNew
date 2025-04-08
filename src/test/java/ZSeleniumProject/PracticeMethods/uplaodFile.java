@@ -27,6 +27,7 @@ public class uplaodFile {
         driver.get("https://the-internet.herokuapp.com/upload");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        System.getProperty("user.dir");
         String filePath = "C:\\Users\\bamar\\IdeaProjects\\PlaywriteProject\\SeleniumProject\\target\\resources\\config.properties";
 
         JavascriptExecutor js = (JavascriptExecutor) driver;

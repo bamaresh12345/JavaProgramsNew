@@ -5,17 +5,16 @@ public class Generic1CharacterProgram {
     public static void main(String[] args) {
 
 
-        char c = 'A';
-
-
-        System.out.println(c);
-        System.out.println((int) c);   // small letter starts from 97 --> a
+        /*;*/
+        System.out.println((int) 'a');   // small letter starts from 97 --> b
         System.out.println((int) 'b');   // small letter starts from 98 --> b
         System.out.println((int) 'z');   // small letter ends  with 122 --> z
 
         System.out.println((int) 'A'); // capital letter starts from 65 --> A
         System.out.println((int) 'B'); // capital letter starts from 66 --> B
-        System.out.println((int) 'Z'); // capital letter ends  with 122 --> Z
+        System.out.println((int) 'Z'); // capital letter ends  with 90 --> Z
+
+        char c = 'A';
 
         System.out.println(c);
 
@@ -37,6 +36,8 @@ public class Generic1CharacterProgram {
 
 
           String s1 =  Character.toString(c) // ** Converts to String object;
+          //** IMP
+          Stirng s= String.valueOf(chars);  --> converts all char array to String  char[] chars = s.toCharArray();  chars to Stirng
 
 
          */

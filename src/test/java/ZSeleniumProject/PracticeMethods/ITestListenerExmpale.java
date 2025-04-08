@@ -5,8 +5,12 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-/*   This is the most frequently used TestNG listener. ITestListener is an interface implemented in the class, and that class overrides the ITestListener-defined methods. The ITestListener listens to the desired events and executes the methods accordingly.
+/*   This is the most frequently used TestNG listener. ITestListener is an interface implemented in the class, and that
+class overrides the ITestListener-defined methods. The ITestListener listens to the desired events and executes the methods
+ accordingly.
 
+
+ITestListener
     It contains the following ways:
 
     onStart(): invoked after test class is instantiated and before execution of any testNG method.
@@ -33,6 +37,17 @@ import org.testng.ITestResult;
          System.out.println("onStart method started");
      }
 
+    @Override
+    public void onTestStart(ITestResult result) {
+        System.out.println("Method started"+ result.getName());
+    }
+
+    @Override
+    public void onTestSuccess(ITestResult result) {
+        System.out.println("Method passed"+ result.getName());
+
+    }
+
      @Override
      public void onTestFailure(ITestResult result) {
          System.out.println("Method failed"+ result.getName());
@@ -45,17 +60,9 @@ import org.testng.ITestResult;
 
      }
 
-     @Override
-     public void onTestStart(ITestResult result) {
-         System.out.println("Method started"+ result.getName());
 
-     }
 
-     @Override
-     public void onTestSuccess(ITestResult result) {
-         System.out.println("Method passed"+ result.getName());
 
-     }
 
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {

@@ -17,7 +17,7 @@ Output: "blue is sky the"
         s = s.trim();
         String rev = "";
 
-        String[] words = s.split(" +");
+        String[] words = s.split(" +");  //" +" is a regular expression that matches one or more spaces.
 
         for (int i = 0; i < words.length; i++) {
 

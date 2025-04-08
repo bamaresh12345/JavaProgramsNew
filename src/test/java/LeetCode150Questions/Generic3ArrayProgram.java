@@ -44,11 +44,11 @@ public class Generic3ArrayProgram {
         //How to convert an array of strings to string in Java
         String[] stringArray = {"My", "name", "is", "Gaurav", "!"};
         String string1 = Arrays.toString(stringArray);
-        System.out.println("An STRING array converted to string using Arrays.toString(): " + string1);
+        System.out.println("An STRING array converted to string using Arrays.toString(): " + string1); //[My, name, is, Gaurav, !]
         //How to convert an array of chars to string in Java
         char[] chars = {'H', 'E', 'L', 'L', 'L', 'O'};
         String string2 = Arrays.toString(chars);
-        System.out.println("An CHAR array converted to string using Arrays.toString(): " + string2);
+        System.out.println("An CHAR array converted to string using Arrays.toString(): " + string2);  //[H, E, L, L, L, O]
 
         // 2. Using the StringBuilder.append() method
 
@@ -57,7 +57,16 @@ public class Generic3ArrayProgram {
         for (int i = 0; i < stringArray.length; i++) {
             strbld.append(stringArray[i]);
         }
-        System.out.println("An array converted to string using StringBuilder: " + strbld);
+        System.out.println("An array converted to string using StringBuilder: " + strbld);  // MynameisGaurav!
+
+        // 2. Using the Simple string value String strnew ="";
+
+        String strnew ="";
+
+        for (int i = 0; i < stringArray.length; i++) {
+            strnew = stringArray[i] +" " + strnew;
+        }
+        System.out.println("An array converted to string using String strnew =\"\" " + strnew);  // ! Gaurav is name My
 
         int[] arr11 = {1, 2, 3, 4, 5};
         int[] arr22 = {5, 2, 4, 1, 4};

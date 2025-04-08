@@ -1,4 +1,4 @@
-package PracticeMethods;
+package ZSeleniumProject.PracticeMethods;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,9 +18,16 @@ public class DataProviderTesting {
 
     }
 
+    /*
+user @DataProvider tag with  @DataProvider(name = "LoginData") and create the data provider -->  public String[][] getData() {
+    same @Test()  tag use the dataprovider= "name of data provider"  -->  @Test(dataProvider = "LoginData")
+
+       No For loop need to read all data from data Provider @Test
+       it will run automatically 4 iterations */
+
     @DataProvider(name = "LoginData")
     public String[][] getData() {
-        String loingData[][] = {
+           String[][] loingData = {
                 {"admin@yourstore.com", "admin", "Valid"},
                 {"admin@yourstore.com", "adm", "Invalid"},
                 {"adm@yourstore.com", "admin", "Invalid"},

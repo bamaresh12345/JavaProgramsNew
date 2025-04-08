@@ -1,11 +1,11 @@
-package BaseClass;
+package ZSeleniumProject.BaseClass;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentReporter;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -19,7 +19,6 @@ import org.testng.annotations.*;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.time.Duration;
@@ -42,7 +41,11 @@ public class baseClass {
 
     //@Parameters("browserName")
      public void setup() throws IOException {
-       driver = new ChromeDriver();
+       driver = new ChromeDriver();   // OR
+
+      //  WebDriver driver = WebDriverManager.getDriver();   // *** IMP
+
+
        driver.get("https://testautomationpractice.blogspot.com/");
 
        String filePath=System.getProperty("user.dir"); // to get the dricetory
@@ -166,6 +169,17 @@ public class baseClass {
         }
     }
 
+    public void selectDataFromDropdownList(WebElement element, int index) {
+        try {
+            Select dropdown = new Select(element);
+            Thread.sleep(2000);
+            dropdown.selectByIndex(index);
+            Thread.sleep(1000);
+            System.out.println("Selected Visible text from Element: " + element);
+        } catch (Exception e) {
+            System.out.println("Element " + element + " was not available for Selected Text: " + e.getStackTrace());
+        }
+    }
     public void selectDataFromDropdownListByIndex(WebElement element, int index) {
         try {
             Select dropdown = new Select(element);
@@ -188,6 +202,20 @@ public class baseClass {
             System.out.println("Element " + element + " was not found in Web page: " + e.getStackTrace());
         }
     }
+
+    public void selectTheCheckbox(WebElement element,String s) {
+        try {
+            if (s.equals("Check") ) {
+                System.out.println("Checkbox is already Selected: " + element);
+            } else {
+                element.click();
+                System.out.println("Checkbox is Selected: " + element);
+            }
+        } catch (Exception e) {
+            System.out.println("Element " + element + " was not found in Web page: " + e.getStackTrace());
+        }
+    }
+
 
     public void selectRadioButton(WebElement element) {
         try {
@@ -287,6 +315,25 @@ public class baseClass {
         }
     }
 
+    public String randomString()
+    {
+        String generatedString = RandomStringUtils.randomAlphabetic(5);
+        return generatedString;
+
+    }
+
+    public String randomNumber()
+    {
+        String randomNumber = RandomStringUtils.randomNumeric(5);
+        return randomNumber;
+
+    }
+
+    public String randomAlphaNumeric()
+    {
+        String randomAlphaNum = RandomStringUtils.randomAlphanumeric(5);
+        return randomAlphaNum;
+    }
 
 
 

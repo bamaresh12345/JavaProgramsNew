@@ -1,4 +1,15 @@
 package ZInterviewOOPSConcepts;
+/*
+The final keyword is a non-access modifier used for classes, attributes and methods, which makes them non-changeable
+(impossible to inherit or override).
+
+final keyword can be applied on
+1. variable  --> Vairavle  cant be changed, else it will give compiler error
+2. on method  --> method  cant be overridden, else it will give compiler error
+3. on class  --> calss cant be extended, else it will give compiler error
+
+The final keyword is useful when you want a variable to always store the same value, like PI (3.14159...).
+ */
 
 //public final class finalKeyWord {  // if final class then can to extended
 	public  class finalKeyWord {
@@ -9,6 +20,13 @@ package ZInterviewOOPSConcepts;
 	
 	//Cannot override Final methods , but can be overloaded
 	public final void method1()
+	{
+		System.out.println("am final method");
+		//speedLimit=120;  //Cannot assign a value to final variable 'speedLimit'
+	}
+
+	//Can overload Final methods wwith differnt paramanters
+	public  void method1(int x)
 	{
 		System.out.println("am final method");
 		//speedLimit=120;  //Cannot assign a value to final variable 'speedLimit'

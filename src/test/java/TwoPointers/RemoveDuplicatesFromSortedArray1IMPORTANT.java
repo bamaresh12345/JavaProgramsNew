@@ -31,17 +31,17 @@ public class RemoveDuplicatesFromSortedArray1IMPORTANT {
      */
 
     public static int removeDuplicatesFromSortedArray(int[] nums) {
-        int count = 0;
-        for (int i = 0; i < nums.length; i++) {
+        int left = 0;
+        for (int right = 0; right < nums.length; right++) {
 
-            if (i < nums.length - 1 && nums[i] == nums[i + 1]) {
+            if (right < nums.length - 1 && nums[right] == nums[right + 1]) {
                 continue;
             } else {
-                nums[count++] = nums[i];
+                nums[left++] = nums[right];
             }
         }
 
-        return count;
+        return left;
     }
 
     public static void main(String[] args) {

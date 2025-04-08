@@ -28,10 +28,10 @@ public class RemovingDuplicatesLettersIMPORTANT {
         String result = "";
 
         for (int i = 0; i < s.length(); i++) {
-            String ch = "" + s.charAt(i);
+            String c = "" + s.charAt(i); // ** IMP
 
-            if (!result.contains(ch)) {
-                result = result + ch;
+            if (!result.contains(c)) {
+                result = result + c;
             }
 
 

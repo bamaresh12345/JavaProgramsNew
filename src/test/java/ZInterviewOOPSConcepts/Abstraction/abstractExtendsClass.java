@@ -21,14 +21,14 @@ public class abstractExtendsClass  extends abstractClass {
 		// TODO Auto-generated method stub
 
 		
-		//abstractClass absMainCalss = new abstractClass() { // cant instiate ablsreact class //The type new abstractClass(){} must implement the inherited abstract method abstractClass.method1()
+		//abstractClass absMainCalss = new abstractClass() { // cant instiate abstractClass class //The type new abstractClass(){} must implement the inherited abstract method abstractClass.method1()
 		
 		abstractExtendsClass childnonAbstractclass = new abstractExtendsClass();
 		
 		childnonAbstractclass.i = 12; // can modify abstract calss variable
 		
-		childnonAbstractclass.method1(); // can call abstract method from chaild class
-		childnonAbstractclass.method2(); // can call abstract method from chaild class
+		childnonAbstractclass.method1(); // can call abstract method from extended class
+		childnonAbstractclass.method2(); // can call abstract method from extended class
 		
 		childnonAbstractclass.nonAbstractMethod1(); // can call non-absrtact methods implemened in abstract class
 		

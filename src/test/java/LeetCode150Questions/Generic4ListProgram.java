@@ -2,166 +2,188 @@ package LeetCode150Questions;
 
 import java.util.*;
 
+
+/*  IMP List methods
+     list.add("Ram");     set.add(i)
+     list.remove("Sam")
+     list.contains("sdf")  --. ** IMP
+     list.size()
+     list.clear()
+
+     // converting set to array
+     String[] arr = new String[list.size()];     or
+     for(String s :list)
+     {   arr1[i] = s;
+     }
+
+     // converting array to set
+     int[] arr2 = {3, 8, 2, 5, 6};
+       List<Integer> set3 = new ArrayList<>();
+       //Converting Array ot list
+       for (int k : arr2) {
+           set3.add(k);
+       }
+*/
 public class Generic4ListProgram {
 
-    public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<>();
-        list.add("Ram");
-        list.add("Sham");
-        list.add("Bhem");
+   public static void main(String[] args) {
+       ArrayList<String> list = new ArrayList<>();
+       list.add("Ram");
+       list.add("Sham");
+       list.add("Bhem");
 
 
-        //Converting list to Array
-        String[] arr = new String[list.size()];
+       //Converting list to Array
+       String[] arr = new String[list.size()];
 
-        for (int i = 0; i < list.size(); i++) {
-            arr[i] = list.get(i);
-        }
-        System.out.println(Arrays.toString(arr));
+       for (int i = 0; i < list.size(); i++) {
+           arr[i] = list.get(i);
+       }
+       System.out.println(Arrays.toString(arr));
 
-        System.out.println(" arr.length " + arr.length);
-        System.out.println("list.size()  " + list.size());
-
-
-        int[] arr2 = {3, 8, 2, 5, 6};
-
-        ArrayList<Integer> list2 = new ArrayList<>();
-
-        //Converting Array ot list
-        for (int i : arr2) {
-            list2.add(i);
-        }
-
-        System.out.println(list2);
+       System.out.println(" arr.length " + arr.length);
+       System.out.println("list.size()  " + list.size());
 
 
-        List<String> list23 = new ArrayList<>();
-        list23.add("Blore");
-        list23.add("Delhi");
-        list23.add("Mumbai");
-        list23.add("Calcata");
+       int[] arr2 = {3, 8, 2, 5, 6};
 
-        list23.remove(3);  //
-        list23.remove("Blore");
-        list23.add("Blore");
-        list23.add("Calcata");
+       ArrayList<Integer> list2 = new ArrayList<>();
 
-        list23.contains("Blore"); // return true or false  *** IMP
-        list23.size(); // return size of list starts from 1 ot n
-        //list.clear(); // return size of list starts from 1 ot n
-        list23.isEmpty(); // return size of list starts from 1 ot n
-        // Colelctions menthods --> starts with capital letter Coll*
-        Collections.sort(list23);
-        Collections.reverse(list23);
-        Collections.shuffle(list23);
-        Collections.max(list23);
-        Collections.min(list23);
-        Collections.swap(list23, 1, 2);
-        // Collections.copy(list1,list2);
-        // Collections.frequency("test");
+       //Converting Array ot list
+       for (int i : arr2) {
+           list2.add(i);
+       }
 
-        //Sorting the list by ignoring the case
-        Collections.sort(list, String.CASE_INSENSITIVE_ORDER);
-
-        Collections.unmodifiableList(list23);  //Creating read only view of the originalList
-
-        //Sorting the list in the reverse order
-        Collections.sort(list, Collections.reverseOrder());
-
-        // remove duplicates from list-->  use set and list
+       System.out.println(list2);
 
 
-        String val2 = list23.get(2);
-        list23.set(2, "Amar");  // repalce index of 2 (Mumbai) with Amar
+       List<String> list23 = new ArrayList<>();
+       list23.add("Blore");
+       list23.add("Delhi");
+       list23.add("Mumbai");
+       list23.add("Calcata");
 
-        System.out.println(list23.contains("Calcata")); // returns true
-        System.out.println(list23.contains("Test")); // returns false
+       list23.remove(3);  //
+       list23.remove("Blore");
+       list23.add("Blore");
+       list23.add("Calcata");
 
+       list23.contains("Blore"); // return true or false  *** IMP
+       list23.size(); // return size of list starts from 1 ot n
+       //list.clear(); // return size of list starts from 1 ot n
+       list23.isEmpty(); // return size of list starts from 1 ot n
+       // Colelctions menthods --> starts with capital letter Coll*
+       Collections.sort(list23);
+       Collections.reverse(list23);
+       Collections.shuffle(list23);
+       Collections.max(list23);
+       Collections.min(list23);
+       Collections.swap(list23, 1, 2);
+       // Collections.copy(list1,list2);
+       // Collections.frequency("test");
 
-        System.out.println(list23);
+       //Sorting the list by ignoring the case
+       Collections.sort(list, String.CASE_INSENSITIVE_ORDER);
 
-        for (int i = 0; i < list23.size(); i++) {
-            System.out.println(i + ") " + list23.get(i));
+       Collections.unmodifiableList(list23);  //Creating read only view of the originalList
 
-        }
+       //Sorting the list in the reverse order
+       Collections.sort(list, Collections.reverseOrder());
 
-
-        //Arraylist to String array
-        String[] arr3 = new String[list23.size()];
-
-        for (int i = 0; i < list23.size(); i++) {
-            arr3[i] = list23.get(i);
-        }
-
-        System.out.println(Arrays.toString(arr));
-
-        //ArrayList to Array
-        List<Integer> list32 = new ArrayList<>();
-        list32.add(34);
-        list32.add(45);
-        list32.add(46);
-        list32.add(85);
-
-        System.out.println(list32);
-
-        int[] arr4 = new int[list32.size()];
-
-        for (int i = 0; i < arr4.length; i++) {
-            arr4[i] = list32.get(i); //** IMP
-        }
-
-        System.out.println(Arrays.toString(arr2));
-
-        //=========================================================================================
-        //Can Add two or more differnt lists
-        List<List<String>> listOfLists = new ArrayList<>();
-
-        List<String> names2 = new ArrayList<>(); // name2 list is added
-        names2.add("test1");
-        names2.add("test2");
-        names2.add("test3");
-
-        listOfLists.add(names2);     // name2 list is added
-
-        List<String> names3 = new ArrayList<>();  // name3 list is added
-        names3.add("ram1");
-        names3.add("ram2");
-        names3.add("ram3");
+       // remove duplicates from list-->  use set and list
 
 
-        listOfLists.add(names3);   // name3 list is added
+       String val2 = list23.get(2);
+       list23.set(2, "Amar");  // repalce index of 2 (Mumbai) with Amar
+
+       System.out.println(list23.contains("Calcata")); // returns true
+       System.out.println(list23.contains("Test")); // returns false
 
 
-        System.out.println("listOfLists--> " + listOfLists);
+       System.out.println(list23);
+
+       for (int i = 0; i < list23.size(); i++) {
+           System.out.println(i + ") " + list23.get(i));
+
+       }
+
+
+       //Arraylist to String array
+       String[] arr3 = new String[list23.size()];
+
+       for (int i = 0; i < list23.size(); i++) {
+           arr3[i] = list23.get(i);
+       }
+
+       System.out.println(Arrays.toString(arr));
+
+       //ArrayList to Array
+       List<Integer> list32 = new ArrayList<>();
+       list32.add(34);
+       list32.add(45);
+       list32.add(46);
+       list32.add(85);
+
+       System.out.println(list32);
+
+       int[] arr4 = new int[list32.size()];
+
+       for (int i = 0; i < arr4.length; i++) {
+           arr4[i] = list32.get(i); //** IMP
+       }
+
+       System.out.println(Arrays.toString(arr2));
+
+       //=========================================================================================
+       //Can Add two or more differnt lists
+       List<List<String>> listOfLists = new ArrayList<>();
+
+       List<String> names2 = new ArrayList<>(); // name2 list is added
+       names2.add("test1");
+       names2.add("test2");
+       names2.add("test3");
+
+       listOfLists.add(names2);     // name2 list is added
+
+       List<String> names3 = new ArrayList<>();  // name3 list is added
+       names3.add("ram1");
+       names3.add("ram2");
+       names3.add("ram3");
+
+
+       listOfLists.add(names3);   // name3 list is added
+
+
+       System.out.println("listOfLists--> " + listOfLists);
 //=========================================================================================
 
-        Set<String> set = new HashSet<>();
-        set.add("Amar");
-        set.add("Akbar");
-        set.add("Antony");
-        set.remove(2); // will not working
-        System.out.println("set.size() " + set.size());
-        System.out.println("set -- " + set);
-        set.remove("Blore");
-        set.add("Blore");
-        set.add("Calcata");
+       Set<String> set = new HashSet<>();
+       set.add("Amar");
+       set.add("Akbar");
+       set.add("Antony");
+       set.remove(2); // will not working
+       System.out.println("set.size() " + set.size());
+       System.out.println("set -- " + set);
+       set.remove("Blore");
+       set.add("Blore");
+       set.add("Calcata");
 
-        for (String s : set) {
+       for (String s : set) {
 
-            if (s.equalsIgnoreCase("Test")) {
-                System.out.println("Performa weindow operation");
-                System.out.println("Performa weindow operation" + s);
-            }
-            //driver.switchTo().window(s)
-        }
+           if (s.equalsIgnoreCase("Test")) {
+               System.out.println("Performa weindow operation");
+               System.out.println("Performa weindow operation" + s);
+           }
+           //driver.switchTo().window(s)
+       }
 
 
-       /* Using equals() (Element-wise Comparison)
-        If you want to check whether two lists have the same elements in the same order, use equals().
+      /* Using equals() (Element-wise Comparison)
+       If you want to check whether two lists have the same elements in the same order, use equals().
 
-        2. Using containsAll() (Order-Insensitive Comparison)
-            If you want to check whether two lists contain the same elements regardless of order:
-        */
+       2. Using containsAll() (Order-Insensitive Comparison)
+           If you want to check whether two lists contain the same elements regardless of order:
+       */
         // List<String> names2 = new ArrayList<>();
         List<Integer> list11 = Arrays.asList(1, 2, 3);
         List<Integer> list22 = Arrays.asList(3, 2, 1);

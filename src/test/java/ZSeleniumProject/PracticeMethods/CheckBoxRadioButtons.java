@@ -1,6 +1,7 @@
-package PracticeMethods;
+package ZSeleniumProject.PracticeMethods;
 
-import BaseClass.baseClass;
+
+import ZSeleniumProject.BaseClass.baseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,6 +16,7 @@ public class CheckBoxRadioButtons extends baseClass {
 
     @Test(priority = 1)
     public void Validate_CheckBoxes() throws InterruptedException {
+        //https://testautomationpractice.blogspot.com/
         System.out.println("url --> " + prop.getProperty("url"));
         String url = prop.getProperty("url");
 

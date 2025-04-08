@@ -5,51 +5,52 @@ import java.util.Map;
 
 public class LongestSubStringWithAtMost2DistinctCharsIMP {
 
-    public static int longestSubStringWithAtMost2DistinctChars(String s) {
+    public static int longestSubstringWithMostKdistinctcharacters(String s)
+    {
+        //base case
+        char[] arr = s.toCharArray();
+        int n = s.length()-1;
 
-        Map<Character, Integer> map = new HashMap<>();
-        char[] chars = s.toCharArray();
-        int R = 0;
-        int L = 0;
-        int maxLen = 0;
+        if(s.length()==0)
+            return -1;
 
-        /* Explination
-                          l,r
-                            "eceba"
-leftPointer                       ^
-leftPointer                    ^
-                            {e:2,c:1,b:1}
-                            {e:1,c:1,b:1}
-                            {e:0,c:1,b:1}
-                            maxLen =3
-       */
-        while (R < chars.length) {
-            //expand the window
-            map.put(chars[R], map.getOrDefault(chars[R], 0) + 1);
+        if(s.length() <=3)
+            return n;
 
-            //shrink the window
-            if (map.size() > 2) {
-                map.put(chars[L], map.get(chars[L]) - 1);
-                if ((map.get(chars[L])) == null || (map.get(chars[L])) == 0) {
+        //dfine pointers
+        int left=0;
+        int maxLen=0;
 
-                    System.out.println("map.get(chars[L])---> " + map.get(chars[L]));
+        Map<Character,Integer> map= new HashMap<>();
 
-                    map.remove(chars[L]);
+        for (int right = 0; right < s.length(); right++) {
+            char rc = s.charAt(right);
+            map.put(rc, map.getOrDefault(rc,0)+1);
+
+            while(map.size() > 2)
+            {   char lc = s.charAt(left);
+                map.put(lc,map.get(lc)-1);
+
+                if(map.get(lc)==0)
+                {
+                    map.remove(lc);
                 }
-                L++;  // VERY IMP**** icrment left irrespswective of removel or not
+
+                left++;
+
             }
 
-            maxLen = Math.max(maxLen, R - L + 1);
-            R++;
+            maxLen = Math.max(maxLen, right-left+1);
         }
 
         return maxLen;
 
-
     }
 
     public static void main(String[] args) {
-        String s = "eceba";
-        System.out.println(longestSubStringWithAtMost2DistinctChars(s));
+
+        String s= "eceba";
+        System.out.println(longestSubstringWithMostKdistinctcharacters(s));
+
     }
 }

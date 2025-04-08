@@ -11,7 +11,28 @@ public class FindMissingNumber {
      */
     public static int findMissingNumber(int[] arr) {
         int sum = 0;
-        int n = arr.length + 1; // use ARRAY +1 , if 0 is missing in Array
+        int n=0;
+        boolean bol= false;
+        for (int i = 0; i < arr.length; i++) {
+
+            if(arr[i]==0)
+            {
+            // n = n+1;
+             bol=true;
+             break;
+            }
+        }
+
+        if(bol==true)
+        {
+            n = arr.length;
+        }
+        else
+        {
+            n = arr.length +1;
+
+        }
+       // int n = arr.length; // use ARRAY +1 , if 0 is missing in Array
         sum = (n * (n + 1)) / 2;
 
         for (int i = 0; i < arr.length; i++) {   // nums.length is very imp lest it will for array out of bondmis
@@ -22,11 +43,32 @@ public class FindMissingNumber {
 
     }
 
-    public static void main(String[] args) {
-        System.out.println("Try programiz.pro");
+    public static int findMissingNumber2(int[] arr) {
+        int sum1 = 0;
+        int sum2 = 0;
+        int finalsum=0;
 
-        int[] arr = {1, 3, 4, 5, 6, 7, 8};
+
+        for (int i = 0; i <arr.length; i++) {
+
+            sum1 = sum1 + arr[i];
+        }
+
+        for (int i = 0; i <=8; i++) {
+            sum2 = sum2 + i;
+        }
+
+        finalsum = sum2 -sum1;
+
+        return finalsum;
+
+    }
+    public static void main(String[] args) {
+
+
+        int[] arr = {0,1,2};
 
         System.out.println(findMissingNumber(arr));
+        System.out.println(findMissingNumber2(arr));
     }
 }

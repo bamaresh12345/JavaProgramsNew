@@ -1,6 +1,7 @@
-package PracticeMethods;
+package ZSeleniumProject.PracticeMethods;
 
-import BaseClass.baseClass;
+
+import ZSeleniumProject.BaseClass.baseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,12 +9,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import static ZSeleniumProject.BaseClass.baseClass.waitForElementToBeClickable;
+
 public class OOpsConceptsInFrameWork extends baseClass {
 /*
 1. Inheretence  --> we have base class we extend for all the testclass  all the methods like driver, wait methods select mehtods can directly used in testclass
 2. Polymorphism -->  poly means many and morphism --> forms , same operation is done in different ways , compile time polymorphism and run time polymorphism
-3. Encapulation --> integrating data (variables) and code (methods) into a single unit
-4. Interfaces --> javScriptExecuter eg; , WebDrviver   eg: , TakesScreenshot eg:
+3. Encapulation --> integrating  (variables) and  (methods) into a single unit
+4. Interfaces --> javScriptExecuter eg; , WebDrviver   eg: , TakesScreenshot eg: , webelement
 Abstraction --> hidng the implemenatiaon and showing only functionlatiy is called data Abastraction
  */
 
@@ -62,6 +65,11 @@ Abstraction --> hidng the implemenatiaon and showing only functionlatiy is calle
 
         //OR
 
+        //Call selectDataFromDropdownList same method to select value from index and from visiableText
+        selectDataFromDropdownList(nameEditBox,"test");
+        selectDataFromDropdownList(nameEditBox,1);
+
+
           clickOnWebElement(nameEditBox, driver);
            Thread.sleep(2000);
         nameEditBox.sendKeys("Test");
@@ -76,6 +84,11 @@ Abstraction --> hidng the implemenatiaon and showing only functionlatiy is calle
         driver.get(prop.getProperty("url"));
         driver.manage().window().maximize();
         WebElement nameEditBox = driver.findElement(By.xpath("//input[@id='name']"));
+
+
+        //Call extending from helper class
+        selectDataFromDropdownList(nameEditBox,"test");
+        selectDataFromDropdownList(nameEditBox,1);
 
         // Method overriding --> use selectValuefromDropDwon()
         //CreateUserMethod(String userName,String email);

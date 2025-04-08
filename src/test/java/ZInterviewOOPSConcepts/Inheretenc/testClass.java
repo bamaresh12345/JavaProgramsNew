@@ -19,19 +19,22 @@ public class testClass extends baseClass{
         SelectValue_StaticMethod(ele,"static");
 
         //Method OverLoading (Accessing methods the base class)
-        SelectValue_Non_StaticMethod(ele,1);
-        SelectValue_Non_StaticMethod(ele,"visibleText");
+        SelectDropdownValue(ele,1);
+        SelectDropdownValue(ele,"visibleText");
 
         //Method Overriding  (Accessing methods the helper calss thru base class)
-        HelperClass.SelectValue_StaticMethod(ele,"String");
         HelperClass hc = new HelperClass();
-        hc.SelectValue_Non_StaticMethod(ele,"visibleText"); // *** Method Overriding
+        hc.SelectDropdownValue(ele,"visibleText"); // *** Method Overriding
+
+        HelperClass.SelectValue_StaticMethod(ele,"String");
 
         //Access the valiable from the base class
         System.out.println("base class variable color : " + color);
 
         //Access the valiable final from the base class
         System.out.println("base class variable color : " + speedLimit);
+
+
 
         driver.quit();
     }

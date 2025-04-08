@@ -6,8 +6,8 @@ public class FindTripletsWithSumOfTwoEelmentsEqualsThird {
     {
         int n = arr.length;
         for (int i = 0; i < n; i++) {
-            for (int j = i+1; j < n; j++) {
-                for (int k = j+1; k < n; k++) {
+            for (int j = i+1; j < n; j++) { // **IMP   j = i+1
+                for (int k = j+1; k < n; k++) {   // **IMP   k = j+1
 
                     if(arr[i]+ arr[j]==arr[k])
                     {

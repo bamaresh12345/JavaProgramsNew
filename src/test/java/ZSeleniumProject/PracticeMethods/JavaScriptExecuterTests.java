@@ -1,7 +1,8 @@
 package ZSeleniumProject.PracticeMethods;
 
-import BaseClass.baseClass;
 
+
+import ZSeleniumProject.BaseClass.baseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -58,7 +59,7 @@ public class JavaScriptExecuterTests extends baseClass {
 
         Thread.sleep(2000);
 
-        //scroll till inital of the page
+        //scroll top  of the page
         js.executeScript("window.scrollBy(0,-document.body.scrollHeight)");  // ,-document will reverse the scrolling
 
         System.out.println(js.executeScript("return window.pageYOffset;")); // prints y axes=is 15

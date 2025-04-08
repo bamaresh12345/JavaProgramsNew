@@ -1,5 +1,7 @@
 package StringsOnlyGoodOne;
 
+import java.util.*;
+
 public class ValidAnagram {
 
     public static boolean validAnagram(String s, String t) {
@@ -8,23 +10,18 @@ public class ValidAnagram {
         if (s.length() != t.length())
             return false;
 
-        s = s.toLowerCase();
-        t = t.toLowerCase();
+        char[] charss = s.toLowerCase().toCharArray();
+        char[] charst = s.toLowerCase().toCharArray();
 
-        int[] ch = new int[26];
+        Arrays.sort(charss);
+        Arrays.sort(charst);
 
-        for (int i = 0; i < s.length(); i++) {
-            ch[s.charAt(i) - 'a']++;
-            ch[t.charAt(i) - 'a']--;
-        }
+        if(Arrays.equals(charss,charst))
+            return true;
+        else
+            return false;
 
-        for (int i = 0; i < ch.length; i++) {
-            if (ch[i] != 0)
-                return false;
 
-        }
-
-        return true;
 
     }
 

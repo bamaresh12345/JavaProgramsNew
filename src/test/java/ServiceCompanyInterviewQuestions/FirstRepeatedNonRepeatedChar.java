@@ -19,6 +19,7 @@ public class FirstRepeatedNonRepeatedChar {
 
         char[] chars = s.toCharArray();
 
+        //first NonRepeated Char
         for (char c : chars) {   // **** IMP
             if (map.get(c) == 1) {  // **** IMP   map.get(c)
                 System.out.println("non repeat key : " + c);
@@ -27,7 +28,7 @@ public class FirstRepeatedNonRepeatedChar {
 
 
         }
-
+        //first Repeated Char
         for (char c : chars) {
             if (map.get(c) > 1) {   // **** IMP   map.get(c)
                 System.out.println("first repeat key : " + c);

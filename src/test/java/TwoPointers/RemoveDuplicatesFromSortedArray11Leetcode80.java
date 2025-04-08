@@ -27,28 +27,30 @@ import java.util.Map;
 public class RemoveDuplicatesFromSortedArray11Leetcode80 {
 
     public static int removeDuplicatesFromSortedArrayII(int[] nums) {
-        /* USE TWO POINTERS concept with i element
-        1. declare i=0 index of array
+        /* USE TWO POINTERS concept with left element
+        1. declare left=0 index of array
         2. run for each loop till end of array nums for(int n : nums)
-        3. check if i<2 or n!=nums[i-2]
-        4. then nums[i] = n;
-        5. incment i++ to move to next element
+        3. check if left<2 or n!=nums[left-2]
+        4. then nums[left] = n;
+        5. incment left++ to move to next element
         6. continute till end of array
-        7. finally return i.
+        7. finally return left.
 
 
          */
 //=================GOOD ONE============================================
 
-        int i = 0;
-        for (int n : nums) {
-            if (i < 2 || n != nums[i - 2]) {
-                nums[i] = n;
-                i++;
+        int left = 0;
+
+        for (int right = 0; right < nums.length; right++) {
+
+            if (left < 2 || nums[right] != nums[left - 2]) {
+                nums[left] = nums[right];
+                left++;
             }
 
         }
-        return i;
+        return left;
 
         //==================================================
     }

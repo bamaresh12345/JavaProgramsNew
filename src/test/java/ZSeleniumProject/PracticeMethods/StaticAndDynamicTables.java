@@ -1,6 +1,7 @@
 package ZSeleniumProject.PracticeMethods;
 
-import BaseClass.baseClass;
+
+import ZSeleniumProject.BaseClass.baseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,9 +25,8 @@ public class StaticAndDynamicTables extends baseClass
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        //find total number of rows in table
-
-//-->      //table[@name='BookTable']/tbody/tr/td -->to remove  /tbody/ --> its mentioned as table[@name='BookTable']//tr **** VERY IMP
+        //find total number of rows in table --> //table[@name='BookTable']/tbody/tr/td -->to remove  /tbody/ --> its mentioned as table[@name='BookTable']//tr **** VERY IMP
+//-->
         int rows = driver.findElements(By.xpath("//table[@name='BookTable']//tr")).size();
         System.out.println("Number of rows : " +rows);
 
@@ -39,7 +39,7 @@ public class StaticAndDynamicTables extends baseClass
         int columns = driver.findElements(By.xpath("//table[@name='BookTable']//th")).size();
         System.out.println("Number of rows : " + columns);
 
-        //2nd way to find total number of rows in table
+        //2nd way to find total number of columns in table
         int columns1 = driver.findElements(By.tagName("th")).size();
         System.out.println("Number of rows : " +columns1);  // 14 becasue it has multiple tables in a page
 
@@ -97,9 +97,11 @@ public class StaticAndDynamicTables extends baseClass
        last()  is used to find the last row of the table but it should be encoded in square brackets--  [last()]  and all web table should be in ()
         (//table[@id="contactList"]/tbody/tr)   [ last() ]        ****
 
+        (//table[@id="Singin"]) [1] --> iof two elements are same ling siginIn button
+
         Postion()  is used for tables to get the specific row of elements its enclosed in square brackets [ position() =2 ]
-        (//table[@id="contactList"]/tbody/tr) [ position() =2 ]   fetches only 2nd row
-        (//table[@id="contactList"]/tbody/tr) [ position() >2 ]   fetches from 2nd row till last row
+        (//table[@id="contactList"]/tbody//tr) [ position() =2 ]   fetches only 2nd row
+        (//table[@id="contactList"]/tbody//tr) [ position() >2 ]   fetches from 2nd row till last row
 
          */
 

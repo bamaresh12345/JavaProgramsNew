@@ -6,17 +6,17 @@ public class moveZeros {
 
     public static int[] moveZerostoRigth(int[] nums) {
 
-        int counter = 0;
-        for (int i = 0; i < nums.length; i++) {
+        int left = 0;
+        for (int right = 0; right < nums.length; right++) {
 
-            if (nums[i] != 0) {
-                nums[counter++] = nums[i];
+            if (nums[right] != 0) {
+                nums[left++] = nums[right];
             }
 
         }
 
-        for (int i = counter; i < nums.length; i++) {
-            nums[counter++] = 0;
+        for (int i = left; i < nums.length; i++) {
+            nums[left++] = 0;
         }
 
         System.out.println(Arrays.toString(nums));

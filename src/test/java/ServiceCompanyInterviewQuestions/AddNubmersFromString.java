@@ -5,6 +5,7 @@ public class AddNubmersFromString {
     public static void AddNubmers(String str) {
         String temp = "0";
         int sum = 0;
+        str = str+"a";
         for (int i = 0; i < str.length(); i++) {
             if (Character.isDigit(str.charAt(i))) {
                 temp = temp + str.charAt(i);
@@ -14,9 +15,10 @@ public class AddNubmersFromString {
             }
         }
 
-        sum = sum + Integer.parseInt(temp);
-        //return sum;
+        //sum = sum + Integer.parseInt(temp);
+       // return sum;
         System.out.println("sum " + sum);
+
 
     }
 

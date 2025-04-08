@@ -15,7 +15,7 @@ public class CheckTwoArraysAreEqual {
         /*  OR
             Arrays.sort(arr1);
             Arrays.sort(arr1);
-           If(Array.equal(arr1,arr2))
+           If(Arrays.equal(arr1,arr2))
            return true;
            else
            return false;

@@ -25,7 +25,7 @@ public class Sort0sand1s {
     }
 
     public static void main(String[] args) {
-        int[] arr = {2, 1, -44, 0, 1, -3, 1, 0, 3, 30, 2, 1, 0, 2, 0,};
+        int[] arr = {2, 1, -44, 0, 1, -3, 1, 0, 3, 30, 2, 1, 0, 2, 0,}; //[-44, -3, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 3, 30]
 
         System.out.println(Arrays.toString(sortArray(arr)));
 

@@ -21,23 +21,37 @@ public class MergeTwoSortedArrays {
     public static void mergeTwoSortedArrays(int[] nums1, int[] nums2, int m, int n) {
         int p1 = m - 1;
         int p2 = n - 1;
-        int p3 = m + n - 1;
+        int p = m + n - 1;
 
-        while (p3 > 0) {
-            int ele1 = 0, ele2 = 0;
-            ele1 = (p1 >= 0) ? nums1[p1] : Integer.MIN_VALUE;
-            ele2 = (p2 >= 0) ? nums2[p2] : Integer.MIN_VALUE;
-
-            if (ele1 > ele2) {
-                nums1[p3] = ele1; //** assing greater value
-                p3--;
+        while(p1 >=0 && p2>=0)
+        {
+            if(nums1[p1] > nums2[p2])
+            {
+                nums1[p] = nums1[p1];
+                p--;
                 p1--;
-            } else {
-                nums1[p3] = ele2;
-                p3--;
+            }
+            else
+            {
+                nums1[p] = nums2[p2];
+                p--;
                 p2--;
             }
+
         }
+
+        //if ther are remaning elelments in nums2 , copy them
+        while(p2 >=0)
+        {
+            nums1[p] = nums2[p2];
+            p--;
+            p2--;
+        }
+
+
+
+
+
         System.out.println(Arrays.toString(nums1));
     }
 

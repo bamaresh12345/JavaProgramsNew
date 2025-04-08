@@ -16,29 +16,27 @@ public class MAxConsectiveOnesII {
 
     public static int maxConsitiveOnesII(int[] nums) {
 
-        int Zerocountflipped = 0, maxLen = 0;
+        int zeroscount = 0, maxLen = 0;
         int Left = 0, Right = 0;
         int n = nums.length;
 
         //find the consitve ones
-        while (Right < n) {
-            //if condition ****
+        for (int right = 0; right < nums.length; right++) {
+
+           //if condition ****
             if (nums[Right] == 0) {
-                Zerocountflipped++;
+                zeroscount++;
             }
 
             //contract window if we dont meet the condition
-            while (Zerocountflipped > 1) {
+            while (zeroscount > 1) {
                 if (nums[Left] == 0) {
-                    Zerocountflipped--;
+                    zeroscount--;
                 }
                 Left++;
             }
             //upddate maxLength
             maxLen = Math.max(maxLen, Right - Left + 1);
-
-            //move the R one to the right
-            Right++;
         }
 
         return maxLen;

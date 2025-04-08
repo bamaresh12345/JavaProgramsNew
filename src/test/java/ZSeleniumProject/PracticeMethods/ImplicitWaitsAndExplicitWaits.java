@@ -1,6 +1,7 @@
-package PracticeMethods;
+package ZSeleniumProject.PracticeMethods;
 
-import BaseClass.baseClass;
+
+import ZSeleniumProject.BaseClass.baseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -20,6 +21,7 @@ public class ImplicitWaitsAndExplicitWaits extends baseClass {
 Implicit Wait in Selenium
 1. Applies to all elements in a test script.
 2. No need to specify “ExpectedConditions” on the element to be located
+2a. NoSuchElelmentException is throw, if elelment is not found
 3 Most effective when used in a test case in which the elements are located with the time frame specified in implicit wait
 4. if all elements taking almost same time , like networkissue in the applicaiton or performance issue in application
 or Enviorment issue in the applicaiton, then implicit waits are much better to use
@@ -27,6 +29,7 @@ or Enviorment issue in the applicaiton, then implicit waits are much better to u
 Explicit Wait in Selenium
 1. Applies only to specific elements as intended by the user.
 2. Must always specify “ExpectedConditions” on the element to be located
+2a. TimeOutException is thrown , if elelment is not enabled or didabled etc. based on condition.
 3. Most effective when used when the elements are taking a long time to load. Also useful for verifying property of the element, such as visibilityOfElementLocated, elementToBeClickable, elementToBeSelected
 4. helps to check for specific element to be enabled or disabled etc.
  */

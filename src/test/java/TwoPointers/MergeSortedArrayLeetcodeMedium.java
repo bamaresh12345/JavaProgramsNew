@@ -1,4 +1,4 @@
-package TwoPointer;
+package TwoPointers;
 
 import java.util.Arrays;
 
@@ -7,25 +7,33 @@ public class MergeSortedArrayLeetcodeMedium {
     public static int[] MergeSortedArray(int[] nums1, int m, int[] nums2, int n) {
         int p1 = m - 1;
         int p2 = n - 1;
-        int p3 = m + n - 1;
+        int p = m + n - 1;
 
-        while (p3 >= 0) {
-            int element1 = 0, element2 = 0;
-            element1 = (p1 >= 0) ? nums1[p1] : Integer.MIN_VALUE;
-            element2 = (p2 >= 0) ? nums2[p2] : Integer.MIN_VALUE;
-
-            if (element1 > element2) {
-                nums1[p3] = element1;
-                p3--;
+        while(p1 >=0 && p2>=0)
+        {
+            if(nums1[p1] > nums2[p2])
+            {
+                nums1[p] = nums1[p1];
+                p--;
                 p1--;
-            } else {
-                nums1[p3] = element2;
-                p3--;
+            }
+            else
+            {
+                nums1[p] = nums2[p2];
+                p--;
                 p2--;
             }
 
-
         }
+
+        //if ther are remaning elelments in nums2 , copy them
+        while(p2 >=0)
+        {
+            nums1[p] = nums2[p2];
+            p--;
+            p2--;
+        }
+
         return nums1;
     }
 

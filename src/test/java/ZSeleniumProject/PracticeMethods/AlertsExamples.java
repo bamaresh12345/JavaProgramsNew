@@ -1,6 +1,7 @@
 package ZSeleniumProject.PracticeMethods;
 
-import BaseClass.baseClass;
+
+import ZSeleniumProject.BaseClass.baseClass;
 import com.aventstack.extentreports.Status;
 
 import org.openqa.selenium.Alert;
@@ -17,6 +18,27 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
+/* Alert : An Alert in Selenium is a small message box which appears on screen to give the user some information or
+notification. It notifies the user with some specific information or error, asks for permission to perform
+certain tasks and it also provides warning messages as well.
+Types of Alerts in Selenium
+1. simple alet message box , eg : when user is created by entering all the fileds, user xyz succesffyl created message is dispayed with ok button
+2. prompt popup --> say there are list of users didaplyed and want to delete one usre, it shows , message box with
+r u sure , you want to delete xyz user? with Yes and no button
+
+in Selenium Webdriver, Alert interface provides the few methods they are
+1. Switching to Alert
+        Alert alert = driver.switchTo().alert();
+2. Capturing alert message.
+       String alertMessage= driver.switchTo().alert().getText();
+applying differnt methods
+Dismiss()
+Accept()
+getText()
+sendKeys()
+
+ */
+
 public class AlertsExamples extends baseClass {
 
     private static final Logger log = LoggerFactory.getLogger(AlertsExamples.class);
@@ -31,6 +53,8 @@ public class AlertsExamples extends baseClass {
     WebDriver driver = new ChromeDriver();
     @Test
     public void verify_AlertTest() throws InterruptedException {
+
+        //WebDriver driver = WebDriverManager.getDriver();   // *** IMP
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -113,6 +137,6 @@ public class AlertsExamples extends baseClass {
     @AfterTest
     public void endReport()
     {
-        extent.flush();
+        extent.flush();   // writes everthing to the reports
     }
 }

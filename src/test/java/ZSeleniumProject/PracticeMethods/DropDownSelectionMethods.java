@@ -1,6 +1,7 @@
-package PracticeMethods;
+package ZSeleniumProject.PracticeMethods;
 
-import BaseClass.baseClass;
+
+import ZSeleniumProject.BaseClass.baseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +10,19 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import java.util.List;
+/*
+Step 1) Import the “Select” package.
+Step 2) Declare the drop-down element as an instance of the Select class.
+3 methods
+selectByVisibleText()
+selectByValue()
+selectByIndex()
 
+isMultiple()
+getOption()
+
+
+ */
 public class DropDownSelectionMethods extends baseClass
 {
 

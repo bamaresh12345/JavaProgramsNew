@@ -1,4 +1,4 @@
-package PracticeMethods;
+package ZSeleniumProject.PracticeMethods;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +9,19 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+/*
+ross Browser testing is a type of non-functional testing that lets you check whether your website works as intended when
+accessed through: multipe browers like chrome, Edge,safari, and firefox browsers
 
+mention this in testNg.xml file
+ <parameter name="browserName" value="chrome"></parameter>
+
+ mention below code in .java file
+   @BeforeTest
+   @Parameters("browserName")
+   public void setup(String browserNaame)
+
+ */
 
     public class MultBrowserDemo {
 
@@ -22,21 +34,15 @@ import org.testng.annotations.Test;
             {
                 driver = new ChromeDriver();
             }
-
             else if (browserNaame.equalsIgnoreCase("IE"))
             {
                 driver = new InternetExplorerDriver();
             }
-
             else if (browserNaame.equalsIgnoreCase("firefox"))
             {
                 driver = new FirefoxDriver();
             }
-
-
-
         }
-
 
         @Test
         public void test1() throws InterruptedException
