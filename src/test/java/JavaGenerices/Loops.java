@@ -59,7 +59,7 @@ public class Loops {
             j = j+1;
         } while(j>2);
 
-        int[] arr = {6,8,3};
+        int[] arr2323 = {6,8,3};
         System.out.println("Array length  arr.length = 3 ,starts from 1,2,3--> " + arr.length);
 
         String str ="abc";
