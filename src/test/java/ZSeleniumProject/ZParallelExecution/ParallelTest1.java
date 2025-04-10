@@ -9,7 +9,7 @@ parallel="classes" → Runs test classes in parallel instead of methods.
  */
 public class ParallelTest1 {
     @Test
-    public void testGoogle() throws InterruptedException {
+    public void testGoogle1() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         WebDriverManager.setDriver(driver);
 
@@ -19,7 +19,7 @@ public class ParallelTest1 {
         driver.quit();
     }
 
-
+    @Test
     public void testGoogle2() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         WebDriverManager.setDriver(driver);

@@ -5,8 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class ParallelTest2 {
+
     @Test
-    public void testBing() throws InterruptedException {
+    public void testBing1() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.bing.com");
         System.out.println("Test2 - Bing: " + driver.getTitle());

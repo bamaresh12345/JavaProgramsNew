@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="3">
+    <test  verbose="2" preserve-order="true" name="Test on chorme ">
+
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="ZSeleniumProject.PracticeMethods.MultBrowserDemo">
+            <methods>
+                <include name="test1"/>
+                <include name="test2"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="2" preserve-order="true" name="Test on IE ">
+
+        <parameter name="browserName" value="IE"></parameter>
+        <classes>
+            <class name="ZSeleniumProject.PracticeMethods.MultBrowserDemo">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="2" preserve-order="true" name="Test on FireFox ">
+
+        <parameter name="browserName" value="firefox"></parameter>
+        <classes>
+            <class name="ZSeleniumProject.PracticeMethods.MultBrowserDemo">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+
+</suite>
+
+
