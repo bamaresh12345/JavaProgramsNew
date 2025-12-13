@@ -49,7 +49,7 @@ array name of arr[r].length always gives the column length eg r.length  ** IMP a
 
         System.out.println();
         //third for loop with  Arrays.toString(arr1[row]
-        for (int[] a : arr1) {   // arr1.length ***
+        for (int[] a : arr1) {   // arr1.length and variable int[] a  IMP ******
             System.out.println(Arrays.toString(a));  // Arrays.toString(a) ** IMP
             //System.out.println(arr1[a]);  // wil not work ** IMP
         }
@@ -88,7 +88,7 @@ array name of arr[r].length always gives the column length eg r.length  ** IMP a
     //Find max or min value in 2D Array
     static int findMaxorMinValue(int arr1[][], int target)
     {
-        int max=Integer.MAX_VALUE;  // *** IMP
+        int max=Integer.MAX_VALUE;  // *** IMP OUTPUT max = 2147483647
         for (int row = 0; row < arr1.length; row++) {   // arr1.length ***
             for (int col = 0; col < arr1[row].length; col++) {  // arr1[row].length **IMP
                 System.out.print(arr1[row][col]+ " ");  // ***  arr1[row][col]+ " "
@@ -107,7 +107,7 @@ array name of arr[r].length always gives the column length eg r.length  ** IMP a
     static int findMaxorMinValueEnhandedForLoop(int arr1[][], int target)
     {
         int min=Integer.MAX_VALUE;
-        for (int[] ints : arr1) {   // row wise
+        for (int[] ints : arr1) {   // row wise 1D Array declartion imp**
             for (int element : ints) {  // each elemlent in row
 
                 if(element < min) {   // check with is min vlaue

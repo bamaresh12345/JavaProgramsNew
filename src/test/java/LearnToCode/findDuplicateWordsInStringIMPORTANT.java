@@ -1,10 +1,15 @@
 package LearnToCode;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 //asdfasdfasdfasdfsd Tesitng branch2
 //updating*****************updatingasdfasdf
+
+// COUNT CHARACTER/STRING/NUMBERS can be only with MAPS , duplicate count , unique count etc..
+// FIND can be with MAPS ,SETS and 2 FOR LOOPS  --> return TRUE or FALSE
 public class findDuplicateWordsInStringIMPORTANT {
 
     public static void findDuplicateWordsIngivenString(String s) {
@@ -33,15 +38,49 @@ public class findDuplicateWordsInStringIMPORTANT {
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
 
             if (entry.getValue() > 1) {
-                System.out.println("duplicate key : " + entry.getKey() + " duplicate count: " + entry.getValue());
+                System.out.println("Duplicate key : " + entry.getKey() + " || Duplicate count: " + entry.getValue());
             }
         }
         return map;
     }
 
     public static void main(String[] args) {
-        String s = "this for testing is pelase ignore it, this is";
+        //String s = "this for testing is pelase ignore it, this is";  // with duplicates  --> OUTPUT TRUE
+        String s = "this for testing is pelase ignore it";  // without duplicates  --> OUTPUT FALSE
 
         findDuplicateWordsIngivenString(s);
+        System.out.println( "*** WITH SETS--> " +findDuplicateWordsInStringwithSets(s));
+        System.out.println( "**** WITH 2 FOR LOOPS--> " +findDuplicateWordsInStringwithForLoop(s));
+    }
+
+    public static boolean findDuplicateWordsInStringwithSets(String str )
+    {
+        Set<String> set = new HashSet<>();
+         String[] arr = str.split(" ");   // *** IMP str.split(" ")
+        for(int i=0; i<arr.length; i++)
+        {
+            if(!set.add(arr[i]))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static boolean findDuplicateWordsInStringwithForLoop(String str)
+    {
+        String[] arr1 = str.split(" ");
+
+        for (int i=0 ; i<arr1.length; i++)
+        {
+            for (int j=i+1; j<arr1.length; j++)
+            {
+                if(arr1[i].equals(arr1[j]))
+                    return true;
+            }
+        }
+
+        return false;
     }
 }

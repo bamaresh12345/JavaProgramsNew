@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class ContainsDuplicates {
+public class ContainsDuplicatesNUMBERS_IMP_STAR {
 
     //brute force method
     public static boolean containsDuplicates(int[] nums) {
