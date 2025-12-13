@@ -18,7 +18,7 @@ import java.util.*;
 
      // converting array to set
      int[] arr2 = {3, 8, 2, 5, 6};
-       Set<Integer> set3 = new ArrayList<>();
+       Set<Integer> set3 = new HashSet<>();
        //Converting Array ot list
        for (int k : arr2) {
            set3.add(k);

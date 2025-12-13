@@ -5,10 +5,10 @@ public class Generic1CharacterProgram {
     public static void main(String[] args) {
 
 
-        char c = 'A';
+        char c = 'a';
 
 
-        System.out.println(c);
+        System.out.println(c);  //prints a
         System.out.println((int) c);   // small letter starts from 97 --> a
         System.out.println((int) 'b');   // small letter starts from 98 --> b
         System.out.println((int) 'z');   // small letter ends  with 122 --> z
@@ -31,7 +31,18 @@ public class Generic1CharacterProgram {
             Character.toUpperCase(c)
             Character.toString(c)
 
-              System.exit(0); --> exist from the method 0 is IMP
+
+            //***************** CHAR to STRING
+            Character.toString(c)
+              String strtoChar =  c+ "";  (converting c to String with empty string) ***** IMP
+
+                c='B';
+               //String s21="Amar" +c;  // converting char to string
+              // char[] chars1 = s21.toCharArray();  // CONVERTING STRING TO Char of Array *****IMP
+             char  eachOfStr= str.charAt(i)  //EACH CHARACTER OF STRING
+
+
+             System.exit(0); --> exist from the method 0 is IMP
 
             use i< s.lenghth()-1
             if(s.charAt(i)== ' '  && s.charAt(i+1)!=' ')  // EMPTY Char Literal, dont give EMPTY char
@@ -49,9 +60,6 @@ public class Generic1CharacterProgram {
 
 
          */
-               c='B';
-               //String s21="Amar";
-              // char[] chars1 = s21.toCharArray();
 
         Character.isLetter(c);
         Character.isDigit(c);
@@ -148,7 +156,7 @@ public class Generic1CharacterProgram {
 
 
 
-
+        // Remove special chars
         String str1="Pr!ogr#am%m*in&g Lan?#guag(e";
         //str1 = str1.toLowerCase();
 
@@ -156,8 +164,8 @@ public class Generic1CharacterProgram {
 
         System.out.println(str2);
 
+        // Remove special chars
         String s3 = "";
-
         char[] chars1 = str.toCharArray();
 
         for(int i=0; i<chars.length-1; i++)

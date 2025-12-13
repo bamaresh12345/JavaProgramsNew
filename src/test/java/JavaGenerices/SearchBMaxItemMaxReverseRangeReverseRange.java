@@ -44,7 +44,7 @@ public class SearchBMaxItemMaxReverseRangeReverseRange {
         return max;
     }
 
-    // reverse of an Array
+    // reverse of an Array without start and end parameters
     public static int[] reverse(int[] arr )
     {
         int start=0;

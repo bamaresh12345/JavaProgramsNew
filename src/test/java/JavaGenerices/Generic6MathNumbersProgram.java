@@ -6,9 +6,14 @@ public class Generic6MathNumbersProgram {
 /*
         The Math.max(x,y) method can be used to find the highest value of x and y:
         The Math.min(x,y) method can be used to find the lowest value of x and y:
-        The Math.sqrt(x) method returns the square root of x:
+        The Math.pow(x,y) method returns the x to the power of y
         The Math.abs(x) method returns the absolute (positive) value of x:
+        The Math.round(x) method returns the rounded value of x:  x = 23.345  --> 23
+        The Math.sqrt(x) method returns the square root of x:
         Math.random() returns a random number between 0.0 (inclusive), and 1.0 (exclusive):
+
+         int max=Integer.MAX_VALUE;   // OUTPUT max = 2147483647
+          int min=Integer.MIN_VALUE;  // OUTPUT min = -2147483647
 
  */
 
@@ -45,6 +50,11 @@ public class Generic6MathNumbersProgram {
         System.out.println(Math.round(5.1));  //5
         System.out.println(Math.round(-5.1));  //-5
         System.out.println(Math.round(-5.9));  //-6
+
+        int max=Integer.MAX_VALUE;
+        int min=Integer.MIN_VALUE;
+        System.out.println("Max value " + max);  //OUTPUT 2147483647
+        System.out.println("Min value " + min);   //OUTPUT -2147483648
 
     }
 }

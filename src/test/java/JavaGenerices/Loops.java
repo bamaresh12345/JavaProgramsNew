@@ -33,7 +33,7 @@ public class Loops {
 
         int i=0;
 
-        while(i>2)   // It will not go into while loop becasue i>2
+        while(i>2)   // It will not go into while loop becasue 0 is not greater than 2
         {
             System.out.println("While  i>2--> " +i);
             i=i+1;
@@ -41,14 +41,14 @@ public class Loops {
 
         while(i<2) // It will go into while loop because i<2 , it will go till 0,1
         {
-            System.out.println("While  i<2--> " +i);
+            System.out.println("While  i<2--> " +i); //prints -> 0,1
             i=i+1;
         }
 
         i=0;
         while(i<=2)
         {
-            System.out.println("While i<=2 --> " +i);
+            System.out.println("While i<=2 --> " +i);   // prints -> 0,1,2
             i=i+1;
         }
 

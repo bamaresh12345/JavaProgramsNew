@@ -1,9 +1,11 @@
-package TLeanringDontCheckThisFolder;
+package ServiceCompanyInterviewQuestions;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
-public class DuplicateElementsInArray {
+public class DuplicateElementsInArrayIMP3WAYS {
 
     public static void main(String[] args) {
 
@@ -39,8 +41,40 @@ public class DuplicateElementsInArray {
 
         }
 
+        System.out.println("******************************* ");
+        findDuplicatechars(arr);
 
 
+
+
+    }
+
+
+    public static void findDuplicatechars(String[] str){
+
+
+
+        Map<String,Integer> map = new HashMap<>();
+
+        for(int i=0; i<str.length; i++)
+        {
+            String s = str[i];
+            if(map.containsKey(s))
+            {
+                map.put(s, map.get(s)+1);
+            }
+            else
+            {
+                map.put(s,1);
+            }
+        }
+
+        for(Map.Entry<String,Integer> entry : map.entrySet())
+        {
+            if(entry.getValue() > 1) {
+                System.out.println("Map Dup char--> " + entry.getKey()+ " | Map Dup count :  " + entry.getValue());
+            }
+        }
 
     }
 }

@@ -4,63 +4,63 @@ public class Generic2StringProgram {
 
     public static void main(String[] args) {
 
-        String s = "test";
+        String str = "test";
 
-        s.toLowerCase();
-        s.toUpperCase();
-        s.toCharArray();
+        str.toLowerCase();
+        str.toUpperCase();
+        str.toCharArray();
 
-        s.toString();
+        str.toString();
 
-        s.length(); // string length() or array[i].length() --> array string length
+        str.length(); // string length() or array[i].length() --> array string length
 
-        s.contains("te"); // *** IMP
-      //  s.contains('t'); // *** IMPchar will not work
+        str.contains("te"); // *** IMP
+      //  str.contains('t'); // *** IMP  char will not work
 
-        s.charAt(1);         // *** IMP
+        str.charAt(1);         // *** IMP
 
-        s.equals("test");              // *** IMP
-        s.equalsIgnoreCase("testt");  // *** IMP
+        str.equals("test");              // *** IMP
+        str.equalsIgnoreCase("testt");  // *** IMP
 
-        s.concat("tt");  //asfasdf                     // *** IMP
-        s.replace('t', 'T');
-        s.replace("e", "E");
-        s.replaceAll("[AEIOUaeiou]", "");   // *** IMP
-        s.replaceAll("[^A-Za-z0-9 ]", "");   // *** IMP
+        str.concat("   JAVA");  //test     JAVA                    // *** IMP
+        str.replace('t', 'T');
+        str.replace("e", "E");
+        str.replaceAll("[AEIOUaeiou]", "");   // *** IMP
+        str.replaceAll("[^A-Za-z0-9 ]", "");   // *** IMP
 
-        String s2 = s.replace('t', 'T');
+        String s2 = str.replace('t', 'T');
         System.out.println(s2);
 
-        String s3 = s.replaceAll("[AEIOUaeiou]", "");
+        String s3 = str.replaceAll("[AEIOUaeiou]", "");
         System.out.println(s3);
 
-        s.indexOf('a');  // ('from char')
-        s.indexOf("st");    // ("from String")
-        s.indexOf("str", 5); // ("str", fromIndex)
+        str.indexOf('a');  // ('from char')
+        str.indexOf("st");    // ("from String")
+        str.indexOf("str", 5); // ("str", fromIndex)
 
-        //s.trim() --> it trims spaces in both left and right very imp, in removing spaces
+        //str.trim() --> it trims spaces in both left and right very imp, in removing spaces
         //System.exit(0); --> exist from the method 0 is IMP
 
-        // begining Index --> inclusive and Index Integer not inclusive cna use s.lenth() instead of s.loength()-1
+        // begining Index --> inclusive and Index Integer not inclusive cna use str.lenth() instead of str.loength()-1
         String s33 = "www.erosteam.com";
 
         s33.substring(0, 4); //www.
         s33.substring(s33.length() - 4, s33.length()); //.com
         s33.substring(4, s33.length() - 4); //erosteam
 
-        s.substring(0, s.length() - 2);   // (begining Index Integer, end Index Integer)
-        s.substring(3);           // (begining Index Integer)
-        s.substring(1, s.length() - 1);
-        s.substring(0, 1);  // frist letter
-        s.substring(s3.length() - 1);  // last letter
+        str.substring(0, str.length() - 2);   // (begining Index Integer, end Index Integer)
+        str.substring(3);           // (begining Index Integer)
+        str.substring(1, str.length() - 1);
+        str.substring(0, 1);  // frist letter
+        str.substring(s3.length() - 1);  // last letter
 
-        s.compareTo("test");
+        str.compareTo("test");
 
 
-        s.startsWith("AB");
-        s.endsWith("AB");
+        str.startsWith("AB");
+        str.endsWith("AB");
 
-        s.replaceFirst("t1", "t2");
+        str.replaceFirst("t1", "t2");
 
         String a = "hello";
         String b = "hello";
@@ -103,14 +103,14 @@ public class Generic2StringProgram {
         // Note if elements are more then one, we will be using loops to append(add)
 
         // Creating a single string
-        String str = obj2.toString();
+        String str1 = obj2.toString();
 
         // Print and display the above string
         // containing all strings as a single string
         // using toString() method
         System.out.println(
                 "Single string generated using toString() method is --> "
-                        + str);
+                        + str1);
 
         System.out.println("************************************");
 

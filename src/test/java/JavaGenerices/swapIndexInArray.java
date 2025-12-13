@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class swapIndexInArray {
 
+
+    // swap specifice variables in an ARRAY ****
     public static void  swap(int[] arr, int index1,int index2)
     {
         int temp=0;

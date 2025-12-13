@@ -86,8 +86,8 @@ public class Generic6SMapsProgram {
             System.out.println(map.size());
           //  System.out.println(map.equals());
            // System.out.println(map.clear());
-            System.out.println("map.keySet()--> " + map.keySet());
-            System.out.println("map.values()--> " + map.values());
+            System.out.println("map.keySet()--> " + map.keySet());  //map.keySet()--> [Bhem, sham, ram]
+            System.out.println("map.values()--> " + map.values());  //map.values()--> [1, 1, 1]
          //   System.out.println(map.putIfAbsent());
         }
 

@@ -53,7 +53,7 @@ public class ArrayLengthIndex {
             arr1[i-1] = arr1[i];   // *** arr1[i-1] = arr1[i]
         }
         System.out.println(Arrays.toString(arr1));  //[2, 3, 4, 4]  DELETE ARRAY
-        //************************Delete 1st elelment of array *************** IMP
+        //************************Delete element val OR 1st elelment of array OR MOVE ZEROS *************** IMP
         /*  int count=0;  //Remove Element***
            if(nums[i]!=val)
           nums[count]=nums[i];

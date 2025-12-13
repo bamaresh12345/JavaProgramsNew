@@ -26,7 +26,7 @@ public class ReverseEachWordInString151 {
 
             for (int j = 0; j < words[i].length(); j++) {
 
-                revWord = words[i].charAt(j) + revWord;    // Very IMP***
+                revWord = words[i].charAt(j) + revWord;    // Very IMP***  langugage  prgrgramming good is JAVA
 
             }
             revString1 = revString1 + " " + revWord;  // Very IMP***
