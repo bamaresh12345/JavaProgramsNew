@@ -1,4 +1,4 @@
-package LearnBasics;
+package ZRestAssuredProject.LearnBasics;
 
 import java.util.Arrays;
 

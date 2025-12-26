@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import static ZSeleniumProject.BaseClass.baseClass.waitForElementToBeClickable;
 
-public class OOpsConceptsInFrameWork extends baseClass {
+public class        OOpsConceptsInFrameWork extends baseClass {
 /*
 1. Inheretence  --> we have base class we extend for all the testclass  all the methods like driver, wait methods select mehtods can directly used in testclass
 2. Polymorphism -->  poly means many and morphism --> forms , same operation is done in different ways , compile time polymorphism and run time polymorphism

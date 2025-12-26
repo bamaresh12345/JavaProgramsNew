@@ -1,5 +1,7 @@
 package LeetCode150Questions;
 
+import java.util.Arrays;
+
 public class Find2ndLargestEelmentInArray {
 
     public static int find2ndLargestEelmentInArray(int[] arr) {
@@ -25,6 +27,7 @@ public class Find2ndLargestEelmentInArray {
         int[] arr = {5, 6, 88, 2, 36, 95};
 
         System.out.println(find2ndLargestEelmentInArray(arr));
+        System.out.println(find2ndLargestEelmentInArraySorting(arr));
     }
 
     public static int find2ndLargestEelmentInArraySorting(int[] arr) {
@@ -32,9 +35,11 @@ public class Find2ndLargestEelmentInArray {
         int n = arr.length;
 
 
+        Arrays.sort(arr);
+
         for (int i = 0; i < arr.length; i++) {
             //sort and return elslemnt
         }
-        return 12;
+        return arr[arr.length-2];
     }
 }

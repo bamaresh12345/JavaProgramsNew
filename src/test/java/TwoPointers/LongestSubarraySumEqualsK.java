@@ -20,22 +20,20 @@ public class LongestSubarraySumEqualsK {
             R->                       use while loop to sum the array and incrment right pointer till end of array
      */
     public static int longestSubarraySumEqualsK(int[] nums, int k) {
-        int left = 0;
-        int right = 0;
-        int n = nums.length;
-        int sum = 0;
-        int maxLen = 0;
-        while (right < n) {
 
+        int left = 0, sum = 0, maxLen = 0;
 
-            sum = sum + nums[right];
+        for (int right = 0; right < nums.length; right++) {
+            sum += nums[right];
 
             while (sum > k) {
                 sum = sum - nums[left];
                 left++;
             }
-            maxLen = Math.max(maxLen, right - left + 1); // comes out for maxsum array or longest subarray
-            right++;
+
+            if (sum == k) {
+                maxLen = Math.max(maxLen, right - left + 1);
+            }
         }
 
         return maxLen;

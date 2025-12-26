@@ -46,5 +46,7 @@ public class CalculateSumOfAllNumsPresentInString {
         String str = "1abc23";
 
         System.out.println(calculateSumOfAllNumsPresentInString(str));
+
+
     }
 }

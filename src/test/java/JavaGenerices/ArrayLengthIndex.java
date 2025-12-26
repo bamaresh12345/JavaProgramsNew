@@ -20,8 +20,14 @@ public class ArrayLengthIndex {
 
         // Fill the entire array with the value 2
 
-
-        System.out.println("Array Length : " + arr.length);  // length start with 1
+        // arr.length ---> length start with 1  but prints 1 to n *** BE CAAREFUL
+        // arr.length-1 ---> use arr.length-1  in for loops or while loops eg: below *** BE CAAREFUL
+        for(int i= arr.length-1; i >=0; i--)  // WHY arr.length-1  , if array has 3 elements it gives arr.length=3  else it will give
+            //Array INDEX OUT Bond
+            // for(int i=0; i < arr.length; i++)  // FOR this, it starts from 0 and ends before   i < arr.length it passed
+            // if you give  i <= arr.length  it shows Array INDEX OUT Bond  --> BE CAREFUL
+        //*****CARFUL below
+        System.out.println("Array Length : " + arr.length);  // length start with 1  but prints 1 to n *** BE CAAREFUL
         System.out.println("Array index : " + arr[0]);  // index starts with 0
        // System.out.println("Array index : " + arr[-1]);  // index out of bound
        // System.out.println("Array index : " + arr[10]);  // index out of bound
@@ -36,6 +42,9 @@ public class ArrayLengthIndex {
         Arrays.equals(arr1, arr3); //false
         Arrays.toString(arr);
         Arrays.fill(arr11, 2);
+        //Arrays.min(arr); // NO not there   Collections.min(list)  have it
+        //Arrays.max(arr); // NO not there
+
 
         //print array in reverse order
         for (int i = arr1.length-1; i >=0; i--) {  //  i = 4-1 ; i>=0; i--***

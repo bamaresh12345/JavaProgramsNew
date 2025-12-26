@@ -28,10 +28,10 @@ public class testClass extends baseClass{
 
         HelperClass.SelectValue_StaticMethod(ele,"String");
 
-        //Access the valiable from the base class
+        //directly Access the variable from the base class
         System.out.println("base class variable color : " + color);
 
-        //Access the valiable final from the base class
+        //directly Access the final variable  from the base class
         System.out.println("base class variable color : " + speedLimit);
 
 

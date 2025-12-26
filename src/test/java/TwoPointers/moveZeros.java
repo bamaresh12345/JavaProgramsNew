@@ -28,8 +28,35 @@ public class moveZeros {
 
         int[] nums = {0, 1, 0, 3, 12};
         System.out.println(Arrays.toString(moveZerostoRigth(nums)));
+        System.out.println(Arrays.toString(moveZerostoLeft(nums)));
 
 
+    }
+
+
+    public static int[] moveZerostoLeft(int[] nums) {
+
+
+        int left=nums.length-1;
+        int right=0;
+
+        for (right = nums.length-1; right >=0; right--)
+        {
+            if(nums[right] != 0)
+            {
+                nums[left--] = nums[right];
+            }
+        }
+        System.out.println(Arrays.toString(nums));
+        for (int i=0; i<=left; i++)
+        {
+            nums[i]=0;
+        }
+
+
+
+        System.out.println(Arrays.toString(nums));
+        return nums;
     }
 
 

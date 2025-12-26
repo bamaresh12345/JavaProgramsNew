@@ -12,14 +12,19 @@ import org.testng.annotations.Test;
 import java.util.List;
 /*
 Step 1) Import the “Select” package.
-Step 2) Declare the drop-down element as an instance of the Select class.
+Step 2) Declare the drop-down element as an instance of the Select class. *** IMP  Select conutryDropDown = new Select(dropdown**);
 3 methods
-selectByVisibleText()
-selectByValue()
-selectByIndex()
+selectByVisibleText() --> Selects option exactly as shown on the UI.
+selectByValue()  --> Selects using the value attribute.
+selectByIndex()  --> Selects by position (0-based index).
 
-isMultiple()
-getOption()
+isMultiple() --> Checks if the drop-down allows multiple selections, returns true or false
+getOption() --> Returns all options in the drop-down list.  , return type
+
+List<WebElement> options = driver.findElement(By.xpath("//select[@id='country']").getOptions();
+for (WebElement option : options) {
+    System.out.println(option.getText());
+}
 
 
  */
@@ -35,7 +40,17 @@ public class DropDownSelectionMethods extends baseClass
         // get the dropdown web element
         WebElement dropdown = driver.findElement(By.xpath("//select[@id='country']"));
 
-        // create select instnace and use all 3 methods
+        /*
+        🔍 Why this line is necessary -- >Select conutryDropDown = new Select(dropdown);  // Select is class
+            dropdown is just a WebElement
+            Methods like
+            selectByVisibleText(), selectByIndex(), selectByValue()
+            do NOT belong to WebElement
+            They belong to Selenium’s Select class
+
+👉 Without creating a Select object, you cannot call those methods.
+         */
+        // create select instnace from the select class and use all 3 methods
         Select conutryDropDown = new Select(dropdown);
         conutryDropDown.selectByVisibleText("India");
         Thread.sleep(1000);
@@ -43,6 +58,7 @@ public class DropDownSelectionMethods extends baseClass
         Thread.sleep(1000);
         conutryDropDown.selectByValue("japan");  // ** IMP japan select from HTML value
         Thread.sleep(1000);
+
 
         // to check if its multi select
         System.out.println("is Dropdown is Multiselect dropdown or Single select dropdown"+conutryDropDown.isMultiple());

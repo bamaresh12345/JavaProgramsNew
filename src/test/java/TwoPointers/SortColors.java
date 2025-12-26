@@ -1,7 +1,29 @@
-package TwoPointer;
+package TwoPointers;
 
 import java.util.Arrays;
+/*
+🟢 Problem Statement (Plain English)
+You are given an array nums with n objects colored red, white, or blue.
+Colors are represented as integers:
 
+0 → red
+1 → white
+2 → blue
+
+Task:
+Sort the array in-place so that same colors are adjacent
+Order should be: red (0), white (1), blue (2)
+Do not use the library’s sort function
+Try one-pass, constant space solution
+
+🟢 Example 1
+Input: nums = [2,0,2,1,1,0]
+Output: [0,0,1,1,2,2] (sorted in ascending order)
+
+🟢 Example 2
+Input: nums = [2,0,1]
+Output: [0,1,2]   (sorted in ascending order)
+ */
 public class SortColors {
 
     public static int[] sortColors(int[] nums) {

@@ -21,44 +21,31 @@ Explanation: The answer is "b", with the length of 1.
 public class LogestSubStringWithOutRepeatingCharactersLeetCode3IMP {
 
     public static int LongestSubString(String s) {
-        int max = 0;
+
+        Set<Character> set = new HashSet<>();     //[e, w, k]  keeps order randomly, but will unique with null vlaue ..
+        //TreeSet<Character> set = new TreeSet<>();     //[e, k, w]  keeps order ascending order,ireespevt od order but will unique with null vlaue
+        //LinkedHashSet<Character> set = new LinkedHashSet<>();   //  [k, e, w]  //keeps order ascending order,ireespevt od order but will unique with null vlaue
+
         int left = 0;
-        int right = 0;
-        int maxLen=0;
-        String substr="";
+        int maxLength = 0;
 
-        Set<Character> set = new HashSet<>();
+        for (int right = 0; right < s.length(); right++) {   // FOR LOOP MUST instead of while
+            char ch = s.charAt(right);
 
-        while (right < s.length()) {  // ** IMP
-            if (!set.contains(s.charAt(right))) {
-                set.add(s.charAt(right));
-                right++;
-                max = Math.max(set.size(), max);
-
-                if(set.size()> maxLen)  // **IMP
-                {  substr="";            // **IMP
-                    maxLen = set.size();  // **IMP
-                    for(char c : set)  // **IMP
-                    {
-                        substr = substr + c;  // **IMP
-                    }
-                }
-                right++;
-
-            } else {
+            // If duplicate found, remove until unique
+            while (set.contains(ch)) {
                 set.remove(s.charAt(left));
-                System.out.println("remove from a pointer " + set);
                 left++;
             }
+
+            set.add(ch);    // no for loop or while loop
+            maxLength = Math.max(maxLength, right - left + 1);
         }
-
-        System.out.println("final");
-        System.out.println(maxLen);
-        System.out.println(substr);
-
-
-        return max;
+        System.out.println(set);
+        return maxLength;
     }
+
+
 
     public static void main(String[] args) {
         // String s = "abcabcbb";

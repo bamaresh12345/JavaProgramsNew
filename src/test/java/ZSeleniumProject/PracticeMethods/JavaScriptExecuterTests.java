@@ -1,6 +1,34 @@
 package ZSeleniumProject.PracticeMethods;
 
+/*
+🔹 What is JavaScriptExecutor in Selenium?
+JavaScriptExecutor is an interface in Selenium that allows you to execute JavaScript code directly inside the browser from your
+Selenium test.
 
+It is used when normal Selenium methods fail or are not sufficient.
+✅ Why is JavaScriptExecutor used?
+Selenium interacts with web elements like a real user.
+But sometimes:
+Element is hidden
+Element is not clickable
+Page is heavy / dynamic
+Page uses JavaScript frameworks (React, Angular)
+
+👉 In such cases, Selenium actions like click() or sendKeys() may fail.
+
+JavaScriptExecutor bypasses Selenium and talks directly to the browser’s DOM.
+
+🔹 How to use JavaScriptExecutor
+JavascriptExecutor js = (JavascriptExecutor) driver;  // (WebDriver is type-cast to JavascriptExecutor)
+
+
+1️⃣ Click an element (when .click() fails) --> js.executeScript("arguments[0].click();", element);
+1️⃣Send text into input field --> js.executeScript("arguments[0].value='Amar';", element);
+3️⃣ Scroll the page  --> js.executeScript("window.scrollBy(0,500)");
+Scroll until element: --> js.executeScript("arguments[0].scrollIntoView(true);", element);
+ scroll to bottom of the page -->  js.executeScript("window.scrollBy(0,document.body.scrollWidth)");
+ scroll to top of the page -->  js.executeScript("window.scrollBy(0,-document.body.scrollWidth)");
+ */
 
 import ZSeleniumProject.BaseClass.baseClass;
 import org.openqa.selenium.By;
@@ -8,7 +36,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class JavaScriptExecuterTests extends baseClass {
@@ -25,7 +52,7 @@ public class JavaScriptExecuterTests extends baseClass {
 
 
         //define javaScriptExecuter
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) driver;    // (WebDriver is type-cast to JavascriptExecutor)
 
         //js.executeScript("argument[0].click()", nameBox); // check practiacaly error dont scare , onnly e is missing
         js.executeScript("arguments[0].click()", nameBox); // click on element

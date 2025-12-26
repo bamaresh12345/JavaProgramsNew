@@ -4,6 +4,19 @@ public class Generic2StringProgram {
 
     public static void main(String[] args) {
 
+        //converting int to String 3 ways
+        //int a=123;
+        // String s1 = Integer.toString(a);
+       // String s2 = Integer.valueOf(a) ;
+       // String s3 = "" + a
+
+  //============================================
+        //converting String to int 3 ways
+        //String b="123";
+        // int s1 = Integer.parseInt(b);
+        // String s2 = String.valueOf(c);
+        // String s3 = "" + a
+
         String str = "test";
 
         str.toLowerCase();
@@ -33,6 +46,10 @@ public class Generic2StringProgram {
 
         String s3 = str.replaceAll("[AEIOUaeiou]", "");
         System.out.println(s3);
+
+        //Integer.parseInt(strnum)  //  converts String strnum = "123" to Integer --> 123
+        String strnum="123";
+        System.out.println("Integer.parseInt--> " + Integer.parseInt(strnum)); // 123  converts String to Integer
 
         str.indexOf('a');  // ('from char')
         str.indexOf("st");    // ("from String")
@@ -74,6 +91,22 @@ public class Generic2StringProgram {
         System.out.println(a == s1); //false --> both matching the reference not values
         System.out.println(s1 == s22); //false --> reference are difference as tehy are defined with string class
 
+        //How do I convert a String to an int in Java? --> Integer.parseInt(i);
+        String snum="123";
+         int k=   Integer.parseInt(snum); //************
+        System.out.println("K vlaue is : " + k);   // OUTPUT 123
+
+        //How do I convert a int to an String in Java? --> Integer.toString(i);
+        int i=123;
+        String snumnew = Integer.toString(i);
+        System.out.println("Integer to String using Integer.toString(i)  : " +i);   //  OUTPUT 123
+        //How do I convert a int to an String in Java? 2nd METHOD --> String str12 = "" + a;
+        int c=12345;
+        String str12 = "" + a;
+        System.out.println("Integer to String using String str12 = \"\" + a " + c);  // OUPTUT 12345
+
+        String str13 = String.valueOf(c);
+        System.out.println("Integer to String using String.valueOf(c) " + c);
 
         //StringBuffer  & StringBuilder are -Mutable
         StringBuffer sb = new StringBuffer("Java");

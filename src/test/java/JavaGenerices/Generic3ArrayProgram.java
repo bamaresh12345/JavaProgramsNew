@@ -43,6 +43,39 @@ public class Generic3ArrayProgram {
 
         System.out.println(Arrays.toString(arr4));
 
+        int[] arr = {0, 1, 0, 3, 12};
+        // System.out.println(Arrays.toString(moveZerostoRigth(nums)));
+        //   System.out.println(Arrays.toString(moveZerostoLeft(nums)));
+
+        int  minuslen =  arr.length-1;
+        System.out.println("nums.length" + arr.length);
+        System.out.println("nums.length-1" +" " + minuslen);
+        for (int i=0; i<arr.length; i++)
+        {
+            System.out.println("nums--> " + arr[i]);
+        }
+
+        for (int i=0; i<arr.length; i++) // Works fine ***IMP but for(int i=0h; i<=arr.lengt0; i++) give Array Index 5 out of bounds
+        {
+            System.out.println("nums--> " + arr[i]);
+        }
+        /*
+        for(int i=0; i<=arr.length; i++)  -->> EXCEPTION  WHY   becsaue of i<=arr.length ,index is pointing at 5th element, which is not thier
+        Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+	    at TwoPointers.moveZeros.main(moveZeros.java:38)
+         */
+
+        for (int i=arr.length-1; i>=0; i--)// Works fine ***IMP but for(int i=arr.length; i>=0; i--) give Array Index 5 out of bounds
+        {
+            System.out.println("Reverse loop nums--> " + arr[i]);
+        }
+
+        /*
+         for(int i=arr.length; i>=0; i--)  -->> EXCEPTION  WHY   becsaue of i=arr.length,index is pointing at 5th element, which is not thier
+        Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+	at TwoPointers.moveZeros.main(moveZeros.java:52)
+         */
+
         //s.trim() --> it trims spaces in both left and right very imp, in removing spaces
         //System.exit(0); --> exist from the method 0 is IMP
 

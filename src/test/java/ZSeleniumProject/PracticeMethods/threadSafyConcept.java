@@ -64,7 +64,7 @@ public class threadSafyConcept {
     public void myTest1()
     {
       driver = new ChromeDriver();
-      setDriver(driver);   // calling setDriver and passing driver parametr
+      setDriver(driver);   // calling setDriver and passing driver parametr,so that other tests wont use this instnce
       //driver.get("https://www.google.com/");
         getDriver().get("https://www.google.com/");  // updated driver with getDriver() method
         //System.out.println(driver.getTitle());
@@ -78,7 +78,7 @@ public class threadSafyConcept {
     public void myTest2()
     {
         driver = new EdgeDriver();
-        setDriver(driver);   // calling setDriver and passing driver parametr
+        setDriver(driver);   // calling setDriver and passing driver parameter , so that other tests wont use this instnce
         //driver.get("https://www.google.com/");
         getDriver().get("https://www.yahoo.com/");  // updated driver with getDriver() method
         //System.out.println(driver.getTitle());

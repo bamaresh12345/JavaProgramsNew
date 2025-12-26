@@ -9,11 +9,11 @@ There are two ways to achieve abstraction in java
 1. Abstract class (0 to 100%)
 2. Interface (100%)
 
-Abstract class  :A class which is declared with the abstract keyword is known as an abstract class in Java. It can have
-abstract and non-abstract methods (method with the body).
+Abstract class  :A class which is declared with the abstract keyword is known as an abstract class in Java.
+It can have abstract and non-abstract methods (method with the body).
  1. abstract method cannot have the body
 
-bastract class cannot be instiscated, canbe insitated by child class
+bastract class cannot be instiscated, can be insitated by child class
 
  */
 

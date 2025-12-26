@@ -1,4 +1,4 @@
-package TwoPointer;
+package TwoPointers;
 
 public class maxiumSubArray {
 
@@ -13,8 +13,7 @@ public class maxiumSubArray {
             if (sum < 0)
                 sum = 0;
 
-            if (sum > maxSum)
-                maxSum = sum;
+            maxSum = Math.max(sum,maxSum);
 
 
         }
@@ -23,8 +22,7 @@ public class maxiumSubArray {
     }
 
     public static void main(String[] args) {
-        int[] nums = {-2, -5, 6, -2, -3, 1, 5, -6};
-        int k = 3;
+        int[] nums = {-4, -2, -7, -1};
         System.out.println(MaxiumSubArray(nums));
     }
 }

@@ -1,4 +1,6 @@
-package TwoPointer;
+package TwoPointers;
+
+import java.util.Arrays;
 
 /*
 215. Kth Largest Element in an Array
@@ -29,7 +31,7 @@ public class KthLargestElementInArrayLeetCode215 {
                 }
             }
         }
-
+        System.out.println(Arrays.toString(nums));
         return nums[n - k];
     }
 

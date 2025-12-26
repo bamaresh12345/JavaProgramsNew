@@ -1,4 +1,4 @@
-package LearnBasics;
+package ZRestAssuredProject.LearnBasics;
 
 public class DetailsPOJO {
 

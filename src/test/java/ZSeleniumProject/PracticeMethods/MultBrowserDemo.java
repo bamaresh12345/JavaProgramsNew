@@ -12,7 +12,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /*
-ross Browser testing is a type of non-functional testing that lets you check whether your website works as intended when
+cross Browser testing is a type of non-functional testing that lets you check whether your website works as intended when
 accessed through: multipe browers like chrome, Edge,safari, and firefox browsers
 
 mention this in testNg.xml file

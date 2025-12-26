@@ -1,6 +1,6 @@
 package ServiceCompanyInterviewQuestions;
 
-public class patternsKunal {
+public class PyramidTrianglesAllKunal {
 
     public static void main(String[] args) {
 

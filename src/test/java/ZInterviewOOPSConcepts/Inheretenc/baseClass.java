@@ -27,17 +27,17 @@ public class baseClass {
 
     final int speedLimit =90;
 
-    public static void SelectValue_StaticMethod(WebElement ele,String value)
+    public static void SelectValue_StaticMethod(WebElement ele,String value) // static methods can access directly in extended class
     {
         System.out.println("SelectValue" + value);
     }
 
-    public void SelectDropdownValue(WebElement ele,int value)
+    public void SelectDropdownValue(WebElement ele,int value) // Method Overriding
     {
         System.out.println("SelectValue : " + value);
     }
 
-    public void SelectDropdownValue(WebElement ele,String value)
+    public void SelectDropdownValue(WebElement ele,String value)  // Method Overriding
     {
         System.out.println("SelectValue : " + value);
     }

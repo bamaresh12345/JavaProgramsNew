@@ -6,8 +6,11 @@ import java.util.*;
   Map<Character, Integer> map = new HashMap<>();
   Map<Integer, Integer> map = new HashMap<>();
 
- map.put(names[i], 1)
- map.put(c, map.getOrDefault(c, 0) +1 );
+ map.put(names[i], 1)  **** IMP
+ map.put(names[i], map.get(names[i])+1);  *** IMP
+ map.put(c, map.getOrDefault(c, 0) +1 );   **** IMP
+
+
  map.containsKey(c);
   map.remove();
   map.size();

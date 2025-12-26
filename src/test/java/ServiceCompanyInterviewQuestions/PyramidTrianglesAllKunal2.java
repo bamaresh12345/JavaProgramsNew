@@ -1,6 +1,6 @@
 package ServiceCompanyInterviewQuestions;
 
-public class patternsIMPLookThis {
+public class PyramidTrianglesAllKunal2 {
 
     public static void main(String[] args) {
         int n = 5;

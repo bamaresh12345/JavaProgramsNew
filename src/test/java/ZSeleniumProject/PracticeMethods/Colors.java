@@ -23,7 +23,7 @@ public class Colors  extends BaseClass {
   2. Broder color
   3. Text Color
 
-  Identidy webelement to find the color and use getCssValue() Method and mention what we want background-color or border-color
+  Identidy webelement to find the color and use "getCssValue()" Method and mention what we want background-color or border-color
   or text-color ,it will strong it rgb string format
   used Color.fromString(rgbabackgroundColor) convert from string value  into to as HexaFromat //Color color = Color.fromString(rgbaColor);
   then convert Hexa to Stirng format and compare the values  --> String hexbackgroundColor = color.asHex();

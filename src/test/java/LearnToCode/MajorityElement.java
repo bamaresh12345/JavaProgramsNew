@@ -27,8 +27,8 @@ public class MajorityElement {
         //int[] nums = {2, 2, 1, 1, 1, 2, 2};
         int[] nums = {3, 2, 3};
 
-        System.out.println(majorityElement(nums));
-        System.out.println(majorityElementUsingHashMap(nums));
+        System.out.println("Brute force Approach --> " + majorityElement(nums));
+        System.out.println("Maps  Approach --> "  +majorityElementUsingHashMap(nums));
     }
 
     /*

@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 /*
 PageFactory.initElements(driver, this);
-This line initializes the web elements defined in your Page Object class using the Selenium @FindBy annotations.
+This line initializes the all the web elements defined in your Page Object class using the Selenium @FindBy annotations.
 PageFactory is a class in Selenium that supports the Page Object Model design pattern.
 
 initElements(driver, this) takes: driver: the WebDriver instance.
@@ -17,7 +17,7 @@ initElements(driver, this) takes: driver: the WebDriver instance.
 this: refers to the current page object class.
 
 When this line runs, it looks at all the @FindBy annotated fields in your class and finds those elements on the
-page using the driver.
+page using the driver and initializes the web elements defined in your Page Object class using the Selenium @FindBy annotation
 
  */
 public class POM_PageFactory {

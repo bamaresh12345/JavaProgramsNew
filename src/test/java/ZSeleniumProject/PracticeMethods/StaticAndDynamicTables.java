@@ -30,12 +30,12 @@ public class StaticAndDynamicTables extends baseClass
         int rows = driver.findElements(By.xpath("//table[@name='BookTable']//tr")).size();
         System.out.println("Number of rows : " +rows);
 
-        //2nd way to find total number of rows in table
+        //2nd way to find total number of rows in table    -- >//tr  --> table rows
         int rows2 = driver.findElements(By.tagName("tr")).size();
         System.out.println("Number of rows : " +rows2);  // 14 becasue it has multiple tables in a page
         System.out.println("*** am Here***");
 
-        //find the number of table columns
+        //find the number of table columns --> //th  --> table headers
         int columns = driver.findElements(By.xpath("//table[@name='BookTable']//th")).size();
         System.out.println("Number of rows : " + columns);
 

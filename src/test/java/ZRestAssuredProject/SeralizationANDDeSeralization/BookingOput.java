@@ -1,4 +1,6 @@
-package SeralizationANDDeSeralization;
+package ZRestAssuredProject.SeralizationANDDeSeralization;
+
+import ZRestAssuredProject.FromFilesSchemaValidateBodyRequest.Bookingdates;
 
 public class BookingOput {
 

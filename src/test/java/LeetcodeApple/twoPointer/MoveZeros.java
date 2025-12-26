@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MoveZeros {
 
     public static void main(String[] args) {
-        int[] arr = {0};
+        int[] arr = {10,2,0,8,12,0,9,5};
 
         System.out.println(Arrays.toString(moveZeros(arr)));
     }

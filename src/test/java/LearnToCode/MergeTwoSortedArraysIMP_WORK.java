@@ -2,12 +2,12 @@ package LearnToCode;
 
 import java.util.Arrays;
 
-public class MergeTwoSortedArrays {
+public class MergeTwoSortedArraysIMP_WORK {
     /*
       1. declare 3 pointers p1,p2,p3
       2. p1 points the last array index of m
       2. p2 points the last array index of n
-      2. p3points the last array index of m+n-1
+      2. p3 points the last array index of m+n-1
       3. run while loop till p3 >0
       4. initlize 2 elments elment1 and element2 =0
       5. assign ele1 when p1>=0 ? nums1[p1] or Integer.MIN_VALUE

@@ -50,7 +50,6 @@ public class commonCharsUniounAndIntersetionBetweenTwoStrings {
 
 
     public static void main(String[] args) {
-        System.out.println("Try programiz.pro");
 
         String s1 = "thin sticks";
         String s2 = "thick bricks";

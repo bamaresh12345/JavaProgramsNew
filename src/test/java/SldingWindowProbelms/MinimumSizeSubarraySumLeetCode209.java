@@ -29,24 +29,24 @@ return len == Integer.MAX_VALUE ? 0 : len;
 public class MinimumSizeSubarraySumLeetCode209 {
 
     public static int minimumSizeSubarraySum(int target, int[] nums) {
-        int len = Integer.MAX_VALUE;
         int left = 0;
         int sum = 0;
 
+        int minLen = Integer.MAX_VALUE; // store minimum length
+
         for (int right = 0; right < nums.length; right++) {
+            sum += nums[right]; // expand window to the right
 
-            sum = sum + nums[right];
-
+            // shrink window from the left while sum >= target
             while (sum >= target) {
-                len = Math.min(len, right - left + 1);
-                sum = sum - nums[left];
+                minLen = Math.min(minLen, right - left + 1);
+                sum -= nums[left];
                 left++;
             }
-
-
         }
-        System.out.println("Length --> " + len);
-        return len == Integer.MAX_VALUE ? 0 : len;
+
+        // if no valid subarray, return 0
+        return minLen == Integer.MAX_VALUE ? 0 : minLen;
 
     }
 

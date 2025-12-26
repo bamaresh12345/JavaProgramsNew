@@ -1,6 +1,7 @@
 package TwoPointers;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /* 3. Longest Substring Without Repeating Characters
  Given a string s, find the length of the longest substring  without repeating characters.
@@ -18,33 +19,39 @@ Explanation: The answer is "b", with the length of 1.
 
 public class LogestSubStringWithOutRepeatingCharactersLeetCode3 {
 
+    //String s = "pwwkew";
     public static int LongestSubString(String s) {
-        int max = 0;
+
+        Set<Character> set = new HashSet<>();     //[e, w, k]  keeps order randomly, but will unique with null vlaue ..
+        //TreeSet<Character> set = new TreeSet<>();     //[e, k, w]  keeps order ascending order,ireespevt od order but will unique with null vlaue
+        //LinkedHashSet<Character> set = new LinkedHashSet<>();   //  [k, e, w]  //keeps order ascending order,ireespevt od order but will unique with null vlaue
+
         int left = 0;
-        int right = 0;
+        int maxLength = 0;
 
-        HashSet<Character> set = new HashSet<>();
+        for (int right = 0; right < s.length(); right++) {   // FOR LOOP MUST instead of while
+            char ch = s.charAt(right);
 
-        while (right < s.length()) {
-            if (!set.contains(s.charAt(right))) {
-                set.add(s.charAt(right));
-                right++;
-                max = Math.max(set.size(), max);
-
-            } else {
+            // If duplicate found, remove until unique
+            while (set.contains(ch)) {
                 set.remove(s.charAt(left));
                 left++;
             }
+
+            set.add(ch);    // no for loop or while loop
+            maxLength = Math.max(maxLength, right - left + 1);
         }
-
-
         System.out.println(set);
-        return max;
+        return maxLength;
     }
 
+
+
+
     public static void main(String[] args) {
-        String s = "abcabcbb";
-        //String s = "pwwkew";
+        // String s = "abcabcbb";
+        // String s = "javaconceptoftheday";
+        String s = "pwwkew";
 
         System.out.println(LongestSubString(s));
     }

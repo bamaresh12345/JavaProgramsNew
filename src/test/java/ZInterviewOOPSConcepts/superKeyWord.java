@@ -5,7 +5,7 @@ The super keyword in Java is a reference variable that is used to refer to paren
 Static keyword can be applied for
 super is used to call a parent constructor:
 super is used to call a parent method:
-super is used to access a parent field:
+super is used to access a parent variable:
 super must be the first statement in a constructor:
 super cannot be used in a static context:
 

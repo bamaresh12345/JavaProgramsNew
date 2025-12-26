@@ -1,5 +1,6 @@
 package LearnBasics;
 
+import ZRestAssuredProject.LearnBasics.EmployePOJO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.path.json.JsonPath;
@@ -12,11 +13,11 @@ import static LearnBasics.baseClassL.APIpostMethodUsingPOJOObject;
 /*
 What is Serialization?
 Serialization = Converting a Java object → JSON (or XML) format
-Used when: You're sending data to the API (POST, PUT, etc.)
+Used when: You're sending data(body) to the API (POST, PUT, etc.)
 
  What is Deserialization?
 Deserialization = Converting JSON → Java object (POJO)
-Used when: You're reading the API response
+Used when: You're reading the API response(JSON)
 
 Why It's Useful in API Testing?
 Concept	Benefit

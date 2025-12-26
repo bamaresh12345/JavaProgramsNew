@@ -1,6 +1,18 @@
 package ZInterviewOOPSConcepts;
 
+/*
+he super keyword refers to superclass (parent) objects.
 
+It is used to call superclass methods or Variables, and also to access the superclass constructor.
+
+The most common use of the super keyword is to eliminate the confusion between superclasses and
+ subclasses that have methods with the same name.he super keyword refers to superclass (parent) objects.
+
+It is used to call superclass methods, and to access the superclass constructor.
+
+The most common use of the super keyword is to eliminate the confusion between superclasses and subclasses that have
+methods with the same name.
+ */
 
 public class Cat  extends InheritanceAnimal{
 	
