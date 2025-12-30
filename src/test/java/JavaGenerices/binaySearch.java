@@ -1,7 +1,7 @@
 package JavaGenerices;
 
 public class binaySearch {
-
+ // test
     public static void main(String[] args) {
         int[] arr1= {-10,-2,0,6,8,12,13,15,18,39};
         int target =6;
