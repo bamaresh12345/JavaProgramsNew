@@ -104,7 +104,10 @@ public class Generic3ArrayProgram {
 
         Arrays.equals(arr1, arr2); // returns true or false  can use for checking values in Arrays
 
-
+        /*
+        🧠 Golden Rule
+        If an if block ends with return, break, or continue → else is optional.
+         */
         //Array To ArrayList In Java  -->***  Arrays.asList(strArr)
         String[] strArr = new String[]{"ANDROID", "JSP", "JAVA", "STRUTS", "HADOOP", "JSF"}; // can be numbers also***
 

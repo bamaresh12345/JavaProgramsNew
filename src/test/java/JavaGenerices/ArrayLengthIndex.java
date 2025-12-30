@@ -127,6 +127,10 @@ public class ArrayLengthIndex {
         System.out.println(list2);
     }
 
+/*
+🧠 Golden Rule
 
+If an if block ends with return, break, or continue → else is optional.
+ */
 
 }

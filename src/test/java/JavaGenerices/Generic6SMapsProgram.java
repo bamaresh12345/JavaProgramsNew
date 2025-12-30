@@ -121,6 +121,16 @@ public class Generic6SMapsProgram {
 
 
         }
+        /*  INSTEAD OF ABOVE 4 LINES of Code , use ONLY below 2 lines no , if(containsKey())--
+         direcetly use for() loop and  map.put(ch , map.getOfDefault(ch, defaltvalue: 0) + 1);  can be used for INTERSECTION
+         and UNION methods
+        for (int i=0; i<s.length(); i++)
+        {
+            char ch = s.charAt(i);
+            map.put(ch , map.getOrDefault(ch, 0)+1);
+
+        }
+         */
 
 
         int largest2 = 0;
@@ -128,6 +138,7 @@ public class Generic6SMapsProgram {
         for (Map.Entry<Integer, Integer> entry : map2.entrySet()) {
             if (entry.getValue() == 1) {  //(entry.getValue() > 1)
                 System.out.println("duplicate int -> " + entry.getKey() + "  duplicate count " + entry.getValue());
+                System.out.print(entry.getKey() + "" + entry.getValue());   //*** IMP printLN not only print  a3b2c6 etc
             }
 
             //=============================================================

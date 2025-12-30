@@ -93,6 +93,17 @@ public class Loops {
                 ❌ Cannot modify structure
 
          */
+/*=================================================================================
+
+🧠 Why while (left < right)?
+•	When pointers meet or cross → everything already reversed
+•	Avoids double swapping
+•	⚠️ COMMON MISTAKES
+•	❌ Using left <= right (extra swap)
+    ❌ Forgetting left++ or right--
+    ❌ Using extra array (not in-place)
+
+ */
 
         /*
         🧠 Common Mistakes in for Loops
